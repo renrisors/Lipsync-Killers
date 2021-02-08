@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3397604959802415927
 Transform:
   m_ObjectHideFlags: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4365014475439484558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.186, y: 0, z: 0}
+  m_LocalPosition: {x: -0.189, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7212494586997379937}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5140a76ad4084704d9eb6ab2da9312b2, type: 3}
   m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.4, y: 1.4}
@@ -88,10 +88,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 991442613644012448, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a1e0691157d48b843a91da4d0f68b891,
+        type: 3}
+    - target: {fileID: 2967977533123260783, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512713417955197396, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512713417955197396, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512713417955197396, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512713417955197396, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512713417955197396, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560550535946044873, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8397699897526961635, guid: a8bbe05f24310734da5700943f3421a9,
         type: 3}
       propertyPath: m_Name
-      value: Note Swipe Right
+      value: Note Swipe Up
       objectReference: {fileID: 0}
     - target: {fileID: 8397699897526961636, guid: a8bbe05f24310734da5700943f3421a9,
         type: 3}
@@ -101,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 8397699897526961636, guid: a8bbe05f24310734da5700943f3421a9,
         type: 3}
       propertyPath: swipeDirection
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397699897526961636, guid: a8bbe05f24310734da5700943f3421a9,
         type: 3}
