@@ -44,7 +44,7 @@ namespace RhythmGameStarter
 
         public enum SwipeDirection
         {
-            Up, Down, Left, Right
+            Up, Down, Left, Right, UpRight, UpLeft, DownRight, DownLeft
         }
 
         void Awake()

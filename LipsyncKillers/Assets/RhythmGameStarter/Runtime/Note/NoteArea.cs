@@ -245,6 +245,19 @@ namespace RhythmGameStarter
                                     case Note.SwipeDirection.Right:
                                         addCombo = diff.x <= -currentNote.swipeThreshold;
                                         break;
+                                    case Note.SwipeDirection.UpRight:
+                                        addCombo = diff.y <= -currentNote.swipeThreshold;
+                                        break;
+                                    case Note.SwipeDirection.UpLeft:
+                                        addCombo = diff.y <= -currentNote.swipeThreshold;
+                                        break;
+                                    case Note.SwipeDirection.DownRight:
+                                        addCombo = diff.y >= currentNote.swipeThreshold;
+                                        break;
+                                    case Note.SwipeDirection.DownLeft:
+                                        addCombo = diff.y >= currentNote.swipeThreshold;
+                                        break;
+
                                 }
                                 // print(currentNote.swipeDirection + " " + diff.x + " " + addCombo + " " + touch.position + " " + touch.fingerId + " " + touch.phase);
                             }
