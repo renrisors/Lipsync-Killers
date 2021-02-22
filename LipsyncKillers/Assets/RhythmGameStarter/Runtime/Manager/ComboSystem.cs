@@ -16,6 +16,9 @@ namespace RhythmGameStarter
 
         private StatsSystem statsSystem;
 
+        
+        public int combo;
+
         private void Awake() {
             statsSystem = GetComponent<StatsSystem>();
         }
@@ -28,6 +31,9 @@ namespace RhythmGameStarter
         public void AddCombo(int addCombo, float deltaDiff, int score)
         {
             statsSystem.AddCombo(addCombo, deltaDiff, score);
+
+            combo++;
+            
 
             if (!isShowing)
             {

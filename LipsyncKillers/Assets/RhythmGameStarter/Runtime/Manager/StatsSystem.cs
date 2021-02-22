@@ -29,6 +29,9 @@ namespace RhythmGameStarter
         [NonSerialized] public int score;
         #endregion
 
+        //Used to check combo and display mensage
+        public GameObject[] comboFrases = new GameObject[5];
+
         [Serializable]
         public class HitLevelList : ReorderableList<HitLevel> { }
 
@@ -47,21 +50,66 @@ namespace RhythmGameStarter
         {
             missed += addMissed;
             onMissedUpdate.Invoke(missed.ToString());
+
+            for (int i = 0; i < 5; i++)
+            {
+                comboFrases[i].SetActive(false);
+            }
         }
 
         void Start()
         {
             UpdateScoreDisplay();
+
+            for (int i = 0; i < 5; i++)
+            {
+                comboFrases[i].SetActive(false);
+            }
         }
 
         public void AddCombo(int addCombo, float deltaDiff, int addScore)
         {
+
             // print(deltaDiff);
             combo += addCombo;
             if (combo > maxCombo)
             {
                 maxCombo = combo;
                 onMaxComboUpdate.Invoke(maxCombo.ToString());
+            }
+
+            //Check if the player is making a combo and display mensage
+            Debug.Log(combo);
+            if (combo < 1)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    comboFrases[i].SetActive(false);
+                }
+            }
+            else if (combo >= 1 && combo <= 5)
+            {
+                comboFrases[0].SetActive(true);
+            }
+            else if (combo >= 6 && combo <= 10)
+            {
+                comboFrases[0].SetActive(false);
+                comboFrases[1].SetActive(true);
+            }
+            else if (combo >= 11 && combo <= 15)
+            {
+                comboFrases[1].SetActive(false);
+                comboFrases[2].SetActive(true);
+            }
+            else if (combo >= 16 && combo <= 20)
+            {
+                comboFrases[2].SetActive(false);
+                comboFrases[3].SetActive(true);
+            }
+            else if (combo < 20)
+            {
+                comboFrases[3].SetActive(false);
+                comboFrases[4].SetActive(true);
             }
 
             for (int i = 0; i < levels.values.Count; i++)
@@ -82,6 +130,7 @@ namespace RhythmGameStarter
             //When no level matched
             onComboStatusUpdate.Invoke("");
 
+            
         }
 
         public void UpdateScoreDisplay()

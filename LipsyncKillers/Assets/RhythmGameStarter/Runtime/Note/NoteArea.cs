@@ -124,6 +124,28 @@ namespace RhythmGameStarter
                         possibleDirection = Note.SwipeDirection.Down;
                         hasPossibleDirection = true;
                     }
+
+                    //Diagonais
+                    else if ((keyboardInputHandler && (hasDirectionKey(keyboardInputHandler.up) && hasDirectionKey(keyboardInputHandler.left)) || ((diff.y <= -NoteRecorder.INSTANCE.swipeThreshold) && (diff.x >= NoteRecorder.INSTANCE.swipeThreshold))))
+                    {
+                        possibleDirection = Note.SwipeDirection.UpLeft;
+                        hasPossibleDirection = true;
+                    }
+                    else if ((keyboardInputHandler && (hasDirectionKey(keyboardInputHandler.up) && hasDirectionKey(keyboardInputHandler.right)) || ((diff.y <= -NoteRecorder.INSTANCE.swipeThreshold) && (diff.x <= -NoteRecorder.INSTANCE.swipeThreshold))))
+                    {
+                        possibleDirection = Note.SwipeDirection.UpRight;
+                        hasPossibleDirection = true;
+                    }
+                    else if ((keyboardInputHandler && (hasDirectionKey(keyboardInputHandler.down) && hasDirectionKey(keyboardInputHandler.left)) || ((diff.y >= NoteRecorder.INSTANCE.swipeThreshold) && (diff.x >= NoteRecorder.INSTANCE.swipeThreshold))))
+                    {
+                        possibleDirection = Note.SwipeDirection.DownLeft;
+                        hasPossibleDirection = true;
+                    }
+                    else if ((keyboardInputHandler && (hasDirectionKey(keyboardInputHandler.down) && hasDirectionKey(keyboardInputHandler.left)) || ((diff.y >= NoteRecorder.INSTANCE.swipeThreshold) && (diff.x <= -NoteRecorder.INSTANCE.swipeThreshold))))
+                    {
+                        possibleDirection = Note.SwipeDirection.DownRight;
+                        hasPossibleDirection = true;
+                    }
                 }
 
                 if ((currentFingerID != -1 && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)) || (keyboardInputHandler && Input.GetKeyUp(key)))
@@ -224,6 +246,20 @@ namespace RhythmGameStarter
                                     case Note.SwipeDirection.Right:
                                         addCombo = Input.GetKey(keyboardInputHandler.right);
                                         break;
+
+                                    //Diagonais
+                                    case Note.SwipeDirection.UpLeft:
+                                        addCombo = Input.GetKey(keyboardInputHandler.upLeft);
+                                        break;
+                                    case Note.SwipeDirection.UpRight:
+                                        addCombo = Input.GetKey(keyboardInputHandler.upRight);
+                                        break;
+                                    case Note.SwipeDirection.DownLeft:
+                                        addCombo = Input.GetKey(keyboardInputHandler.downLeft);
+                                        break;
+                                    case Note.SwipeDirection.DownRight:
+                                        addCombo = Input.GetKey(keyboardInputHandler.downRight);
+                                        break;
                                 }
                             }
 
@@ -245,6 +281,8 @@ namespace RhythmGameStarter
                                     case Note.SwipeDirection.Right:
                                         addCombo = diff.x <= -currentNote.swipeThreshold;
                                         break;
+
+                                    //Diagonais
                                     case Note.SwipeDirection.UpRight:
                                         addCombo = diff.y <= -currentNote.swipeThreshold;
                                         break;

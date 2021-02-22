@@ -16,6 +16,10 @@ namespace RhythmGameStarter
         public KeyCode down;
         public KeyCode left;
         public KeyCode right;
+        public KeyCode upLeft;
+        public KeyCode upRight;
+        public KeyCode downLeft;
+        public KeyCode downRight;
 
         private NoteArea[] noteAreas;
 
