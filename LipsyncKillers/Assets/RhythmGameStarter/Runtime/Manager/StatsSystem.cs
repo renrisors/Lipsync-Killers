@@ -90,26 +90,31 @@ namespace RhythmGameStarter
             else if (combo >= 1 && combo <= 5)
             {
                 comboFrases[0].SetActive(true);
+                score += (int)(addScore * 0.5);
             }
             else if (combo >= 6 && combo <= 10)
             {
                 comboFrases[0].SetActive(false);
                 comboFrases[1].SetActive(true);
+                score += (int)(addScore * 1);
             }
             else if (combo >= 11 && combo <= 15)
             {
                 comboFrases[1].SetActive(false);
                 comboFrases[2].SetActive(true);
+                score += (int)(addScore * 1.2);
             }
             else if (combo >= 16 && combo <= 20)
             {
                 comboFrases[2].SetActive(false);
                 comboFrases[3].SetActive(true);
+                score += (int)(addScore * 1.7);
             }
             else if (combo < 20)
             {
                 comboFrases[3].SetActive(false);
                 comboFrases[4].SetActive(true);
+                score += (int)(addScore * 2);
             }
 
             for (int i = 0; i < levels.values.Count; i++)

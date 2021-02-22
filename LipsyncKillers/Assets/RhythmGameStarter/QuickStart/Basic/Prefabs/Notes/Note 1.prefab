@@ -5185,7 +5185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46aa07a12618a154bbe239c77a2ed132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 50
   action: 0
   swipeDirection: 0
   swipeThreshold: 0.5

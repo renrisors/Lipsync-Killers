@@ -136,6 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397699897526961636, guid: a8bbe05f24310734da5700943f3421a9,
         type: 3}
+      propertyPath: score
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397699897526961636, guid: a8bbe05f24310734da5700943f3421a9,
+        type: 3}
       propertyPath: action
       value: 2
       objectReference: {fileID: 0}
