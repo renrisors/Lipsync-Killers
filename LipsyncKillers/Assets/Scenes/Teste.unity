@@ -651,6 +651,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: RhythmCore
       objectReference: {fileID: 0}
+    - target: {fileID: 2812891354770858997, guid: fe644e17ab53a314f926aa81d877b247,
+        type: 3}
+      propertyPath: notePrefabMapping
+      value: 
+      objectReference: {fileID: 11400000, guid: cd8acce00c3ef294394ceb082a8ccdc0,
+        type: 2}
     - target: {fileID: 4087034868758555205, guid: fe644e17ab53a314f926aa81d877b247,
         type: 3}
       propertyPath: comboFrases.Array.data[0]
@@ -2595,6 +2601,11 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2820465012386860447, guid: 2dd561a762e8f384ea7fba0083eb9a1d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 3522480123301874880, guid: 2dd561a762e8f384ea7fba0083eb9a1d,
         type: 3}
       propertyPath: m_textInfo.lineCount
@@ -2798,7 +2809,7 @@ PrefabInstance:
     - target: {fileID: 9175025591039205793, guid: 2dd561a762e8f384ea7fba0083eb9a1d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 119.70999
+      value: 119.70996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dd561a762e8f384ea7fba0083eb9a1d, type: 3}
