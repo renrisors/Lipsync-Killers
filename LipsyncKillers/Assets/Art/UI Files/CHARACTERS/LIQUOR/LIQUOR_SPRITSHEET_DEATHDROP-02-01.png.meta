@@ -1,67 +1,64 @@
 fileFormatVersion: 2
-guid: 71aba293c946bb043a66af94286df8d2
+guid: 377c1d8d35dcc7649aaed2523beb72ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1325390397321009249
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_0
+      213: -6423002655659658955
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_0
   - first:
-      213: 6791925575342929347
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_1
+      213: -4174030653010448592
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_1
   - first:
-      213: -2936983740177592601
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_2
+      213: -8630636872847327026
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_2
   - first:
-      213: 1598485450726024083
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_3
+      213: 259240907044985868
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_3
   - first:
-      213: -1678806782539428671
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_4
+      213: -359601647617634869
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_4
   - first:
-      213: 5727217315056697174
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_5
+      213: -765919133172147567
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_5
   - first:
-      213: 1696988123056713358
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_6
+      213: -7240511528535285807
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_6
   - first:
-      213: -2474057084972383421
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_7
+      213: 2535595797770257301
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_7
   - first:
-      213: -6086092144729918789
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_8
+      213: -1952359666244353009
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_8
   - first:
-      213: -6523656528366616250
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_9
+      213: -1361070616863313348
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_9
   - first:
-      213: 3231994686263495908
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_10
+      213: 7581212628991847361
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_10
   - first:
-      213: 4952505523758169329
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_11
+      213: -2278743616450677424
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_11
   - first:
-      213: 8704938094514228676
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_12
+      213: -2039972212902599579
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_12
   - first:
-      213: -6645918954137163285
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_13
+      213: 5351681870896630417
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_13
   - first:
-      213: 6964985874351330065
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_14
+      213: -3822896921708037443
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_14
   - first:
-      213: 294574283706876835
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_15
+      213: -1140693035367754048
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_15
   - first:
-      213: -8621101340530226216
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_16
+      213: -2126750118715138412
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_16
   - first:
-      213: 5809217666291080191
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_17
+      213: -5712638584000297349
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_17
   - first:
-      213: -5133917074628742380
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_18
-  - first:
-      213: -2204920216207122091
-    second: LIQUOR_SPRITSHEET_DEATHDROP-01_19
+      213: -4184214625494151933
+    second: LIQUOR_SPRITSHEET_DEATHDROP-02-01_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -159,7 +156,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_0
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_0
       rect:
         serializedVersion: 2
         x: 0
@@ -173,14 +170,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168580d4b8bb46210800000000000000
-      internalID: 1325390397321009249
+      spriteID: 531f30e7d19ecd6a0800000000000000
+      internalID: -6423002655659658955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_1
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_1
       rect:
         serializedVersion: 2
         x: 450
@@ -194,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c5b43b5354c14e50800000000000000
-      internalID: 6791925575342929347
+      spriteID: 03f68bd6c3dd216c0800000000000000
+      internalID: -4174030653010448592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_2
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_2
       rect:
         serializedVersion: 2
         x: 900
@@ -215,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eecd9f59dcbd37d0800000000000000
-      internalID: -2936983740177592601
+      spriteID: ec00c80cd71d93880800000000000000
+      internalID: -8630636872847327026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_3
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_3
       rect:
         serializedVersion: 2
         x: 1350
@@ -236,14 +233,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 393a72d5c06fe2610800000000000000
-      internalID: 1598485450726024083
+      spriteID: c0c9aaf3b32099300800000000000000
+      internalID: 259240907044985868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_4
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_4
       rect:
         serializedVersion: 2
         x: 1800
@@ -257,14 +254,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cc8830402ea3b8e0800000000000000
-      internalID: -1678806782539428671
+      spriteID: bcd0b1de430720bf0800000000000000
+      internalID: -359601647617634869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_5
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_5
       rect:
         serializedVersion: 2
         x: 0
@@ -278,14 +275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65fbb6fcdc92b7f40800000000000000
-      internalID: 5727217315056697174
+      spriteID: 19a599c3b98ee55f0800000000000000
+      internalID: -765919133172147567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_6
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_6
       rect:
         serializedVersion: 2
         x: 450
@@ -299,14 +296,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8e2ad6f4b9ec8710800000000000000
-      internalID: 1696988123056713358
+      spriteID: 1df988d6029848b90800000000000000
+      internalID: -7240511528535285807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_7
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_7
       rect:
         serializedVersion: 2
         x: 900
@@ -320,14 +317,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 343ce2870326aadd0800000000000000
-      internalID: -2474057084972383421
+      spriteID: 593c114a1fe303320800000000000000
+      internalID: 2535595797770257301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_8
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_8
       rect:
         serializedVersion: 2
         x: 1350
@@ -341,14 +338,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb2f31b907bd98ba0800000000000000
-      internalID: -6086092144729918789
+      spriteID: f0484b34a33d7e4e0800000000000000
+      internalID: -1952359666244353009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_9
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_9
       rect:
         serializedVersion: 2
         x: 1800
@@ -362,14 +359,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 641cc0683f05775a0800000000000000
-      internalID: -6523656528366616250
+      spriteID: c32f3a73c718c1de0800000000000000
+      internalID: -1361070616863313348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_10
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_10
       rect:
         serializedVersion: 2
         x: 0
@@ -383,14 +380,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec8fa61b0a5adc20800000000000000
-      internalID: 3231994686263495908
+      spriteID: 1cba3c518b0e53960800000000000000
+      internalID: 7581212628991847361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_11
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_11
       rect:
         serializedVersion: 2
         x: 450
@@ -404,14 +401,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fcf3cbc885dab440800000000000000
-      internalID: 4952505523758169329
+      spriteID: 055b44f01c64060e0800000000000000
+      internalID: -2278743616450677424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_12
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_12
       rect:
         serializedVersion: 2
         x: 900
@@ -425,14 +422,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cd494383172ec870800000000000000
-      internalID: 8704938094514228676
+      spriteID: 564e542a41090b3e0800000000000000
+      internalID: -2039972212902599579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_13
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_13
       rect:
         serializedVersion: 2
         x: 1350
@@ -446,14 +443,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be96e9c3ce3f4c3a0800000000000000
-      internalID: -6645918954137163285
+      spriteID: 19a01b1ae4ef44a40800000000000000
+      internalID: 5351681870896630417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_14
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_14
       rect:
         serializedVersion: 2
         x: 1800
@@ -467,14 +464,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 113135a20c998a060800000000000000
-      internalID: 6964985874351330065
+      spriteID: dba78a8118752fac0800000000000000
+      internalID: -3822896921708037443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_15
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_15
       rect:
         serializedVersion: 2
         x: 0
@@ -488,14 +485,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a3405410c9861400800000000000000
-      internalID: 294574283706876835
+      spriteID: 0c6942d5ab17b20f0800000000000000
+      internalID: -1140693035367754048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_16
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_16
       rect:
         serializedVersion: 2
         x: 450
@@ -509,14 +506,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8db4d01e102bb5880800000000000000
-      internalID: -8621101340530226216
+      spriteID: 49ed6f7f8044c72e0800000000000000
+      internalID: -2126750118715138412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_17
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_17
       rect:
         serializedVersion: 2
         x: 900
@@ -530,14 +527,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb143e50bc7e9050800000000000000
-      internalID: 5809217666291080191
+      spriteID: b76c8768971a8b0b0800000000000000
+      internalID: -5712638584000297349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_18
+      name: LIQUOR_SPRITSHEET_DEATHDROP-02-01_18
       rect:
         serializedVersion: 2
         x: 1350
@@ -551,29 +548,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413f07c0f99a0c8b0800000000000000
-      internalID: -5133917074628742380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LIQUOR_SPRITSHEET_DEATHDROP-01_19
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 0
-        width: 450
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 551a5eadebc8661e0800000000000000
-      internalID: -2204920216207122091
+      spriteID: 30d4d6f87feaee5c0800000000000000
+      internalID: -4184214625494151933
       vertices: []
       indices: 
       edges: []
@@ -581,7 +557,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 35a097d8e92c0f24a8c19b4ae91aa0d2
+    spriteID: 189f52aa583649a45bd460e67188d56c
     internalID: 0
     vertices: []
     indices: 
