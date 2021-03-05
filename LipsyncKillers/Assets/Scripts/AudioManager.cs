@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+
             s.source.loop = s.loop;
 
         }
@@ -36,7 +37,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("");    
+        Play("Theme");    
     }
 
     public void Play (string name)
@@ -44,9 +45,26 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + name + "not found!");
+            Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
         s.source.Play();
     }
+
+    /* void OnDestroy()
+    {
+        Debug.Log("Destroyed Audio Manager!");
+
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+
+            PlayerPrefs.SetFloat(s.name + "Volume", s.volume);
+            PlayerPrefs.SetFloat(s.name + "Pitch", s.pitch);
+            PlayerPrefs.SetInt(s.name + "Loop", IsTrue(s.loop));
+            s.source.loop = s.loop;
+
+        }
+    } */
 }
