@@ -20,7 +20,6 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1325390397321009249, guid: 71aba293c946bb043a66af94286df8d2,
       value: {fileID: -6423002655659658955, guid: 377c1d8d35dcc7649aaed2523beb72ee,
         type: 3}
     - time: 0.083333336
