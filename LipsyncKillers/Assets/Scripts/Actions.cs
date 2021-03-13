@@ -33,7 +33,7 @@ public class Actions : MonoBehaviour
         }
 
         // Check if special is ready and play the animation
-        if (energyCharge == 5)
+        if (energyCharge == 30)
         {
             animator.SetBool("Special", true);
         }

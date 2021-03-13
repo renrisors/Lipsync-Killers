@@ -120,7 +120,7 @@ namespace RhythmGameStarter
 
             //carregar o especial
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            //player.GetComponent<Actions>().chargeSpecial();
+            player.GetComponent<Actions>().chargeSpecial();
 
             for (int i = 0; i < levels.values.Count; i++)
             {
