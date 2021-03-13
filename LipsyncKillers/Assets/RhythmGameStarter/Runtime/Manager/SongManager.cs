@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using System.Collections;
 
 namespace RhythmGameStarter
 {
@@ -18,6 +19,10 @@ namespace RhythmGameStarter
         public SongItem defaultSong;
         public float delay;
         public bool looping;
+
+        [Tooltip("Animations that's play before a song start")]
+        public GameObject startAnimation;
+        private bool beforeStart = true;
 
         [Tooltip("Automatically handle play/pause when timescale set to 0, or back to 1")]
         public bool autoTimeScalePause;
@@ -62,12 +67,10 @@ namespace RhythmGameStarter
 
         private void Start()
         {
+            StartCoroutine(StartContdown());
             trackManager.Init(this);
 
-            if (playOnAwake && defaultSong)
-            {
-                PlaySong(defaultSong);
-            }
+            
         }
 
         public void PlaySong()
@@ -146,6 +149,12 @@ namespace RhythmGameStarter
 
         void Update()
         {
+            if (playOnAwake && defaultSong)
+            {
+                playOnAwake = false;
+                PlaySong(defaultSong);
+            }
+
             if (!songStartEventInvoked && songHasStarted && songPosition >= 0)
             {
                 songStartEventInvoked = true;
@@ -203,6 +212,38 @@ namespace RhythmGameStarter
                 if (looping)
                     PlaySong(currentSongItem);
             }
+        }
+
+        private void Countdown()
+        {
+            if(beforeStart == true)
+            {
+                float countdown = 0;
+                startAnimation.GetComponent<Animator>().SetBool("canPlay", true);
+                Time.timeScale = 0;
+                while (countdown < 5f)
+                {
+                    Debug.Log(countdown);
+                    countdown += Time.deltaTime;
+                }
+                Time.timeScale = 1;
+                startAnimation.SetActive(false);
+                beforeStart = false;
+            }
+        }
+
+        public IEnumerator StartContdown()
+        {
+            playOnAwake = false;
+            Debug.Log("Entrou na corrotina");
+
+            startAnimation.GetComponent<Animator>().SetBool("canPlay", true);
+            //yield on a new YieldInstruction that waits for 5 seconds.
+            yield return new WaitForSeconds(5);
+
+            startAnimation.SetActive(false);
+            playOnAwake = true;
+            Debug.Log("Saiu da corrotina");
         }
     }
 }

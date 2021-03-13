@@ -890,6 +890,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6570265792833841976, guid: fe644e17ab53a314f926aa81d877b247,
         type: 3}
+      propertyPath: startAnimation
+      value: 
+      objectReference: {fileID: 1424457111}
+    - target: {fileID: 6570265792833841976, guid: fe644e17ab53a314f926aa81d877b247,
+        type: 3}
       propertyPath: progressAsPercentage
       value: 0
       objectReference: {fileID: 0}
@@ -1281,7 +1286,7 @@ GameObject:
   - component: {fileID: 1124099380}
   m_Layer: 0
   m_Name: Boudaries
-  m_TagString: Untagged
+  m_TagString: Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1393,7 +1398,7 @@ GameObject:
   - component: {fileID: 1151745042}
   m_Layer: 0
   m_Name: Boudary 1
-  m_TagString: Untagged
+  m_TagString: Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2536,7 +2541,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.496
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3228,7 +3233,7 @@ GameObject:
   - component: {fileID: 2074705362}
   - component: {fileID: 2074705363}
   m_Layer: 0
-  m_Name: Boudary
+  m_Name: Boudary 2
   m_TagString: Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

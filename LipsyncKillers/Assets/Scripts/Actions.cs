@@ -18,7 +18,7 @@ public class Actions : MonoBehaviour
     {
         if(canMove == true)
         {
-            if (joystick.Horizontal <= .2f)
+            if (joystick.Horizontal < -.2f)
             {
                 horizontalMove = moveSpeed;
             }
@@ -59,9 +59,10 @@ public class Actions : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Encostou");
         if (collision.otherCollider is BoxCollider2D)
         {
-            if (collision.collider.tag == "Boudary")
+            if (collision.collider.tag == "Boundary")
             {
                 canMove = false;
             }
@@ -72,7 +73,7 @@ public class Actions : MonoBehaviour
     {
         if (collision.otherCollider is BoxCollider2D)
         {
-            if (collision.collider.tag == "Boudary")
+            if (collision.collider.tag == "Boundary")
             {
                 canMove = true;
             }

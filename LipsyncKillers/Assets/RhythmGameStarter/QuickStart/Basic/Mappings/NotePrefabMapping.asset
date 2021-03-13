@@ -34,12 +34,6 @@ MonoBehaviour:
   - prefab: {fileID: 7212494586997379943, guid: 705abc30b461b2448815791bf0bd5b8c,
       type: 3}
     poolSize: 6
-  - prefab: {fileID: 7212494586997379943, guid: 8f235079eb2b08a4693eec17f84ef888,
-      type: 3}
-    poolSize: 6
-  - prefab: {fileID: 7212494586997379943, guid: 9bca2e7c699534e99b2a3e588d9d3ccf,
-      type: 3}
-    poolSize: 6
   - prefab: {fileID: 7212494586997379943, guid: e3685f22e0f0ab54a957dbc08eedddb4,
       type: 3}
     poolSize: 6
@@ -53,18 +47,30 @@ MonoBehaviour:
       type: 3}
     poolSize: 6
   mapping:
-  - notePrefabIndex: 1
+  - notePrefabIndex: 0
     noteName: 0
     noteOctave: 4
-  - notePrefabIndex: 3
+  - notePrefabIndex: 1
     noteName: 0
     noteOctave: 5
   - notePrefabIndex: 2
     noteName: 0
     noteOctave: 6
+  - notePrefabIndex: 3
+    noteName: 0
+    noteOctave: 6
   - notePrefabIndex: 4
     noteName: 0
     noteOctave: 6
-  - notePrefabIndex: 5
+  - notePrefabIndex: 6
+    noteName: 0
+    noteOctave: 6
+  - notePrefabIndex: 7
+    noteName: 0
+    noteOctave: 6
+  - notePrefabIndex: 8
+    noteName: 0
+    noteOctave: 6
+  - notePrefabIndex: 9
     noteName: 0
     noteOctave: 6

@@ -31,6 +31,7 @@ namespace RhythmGameStarter
 
         //Used to check combo and display mensage
         public GameObject[] comboFrases = new GameObject[5];
+        
 
         [Serializable]
         public class HitLevelList : ReorderableList<HitLevel> { }
@@ -116,6 +117,10 @@ namespace RhythmGameStarter
                 comboFrases[4].SetActive(true);
                 score += (int)(addScore * 2);
             }
+
+            //carregar o especial
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            //player.GetComponent<Actions>().chargeSpecial();
 
             for (int i = 0; i < levels.values.Count; i++)
             {

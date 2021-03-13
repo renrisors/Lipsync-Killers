@@ -1,7 +1,8 @@
 {
     "name": "com.bennykok.rgs.editor",
     "references": [
-        "GUID:ad0640414aa49284c86e79cdc4c083ad"
+        "GUID:ad0640414aa49284c86e79cdc4c083ad",
+        "GUID:3dce8678f77ed88409f7c67e04058d55"
     ],
     "includePlatforms": [
         "Editor"
