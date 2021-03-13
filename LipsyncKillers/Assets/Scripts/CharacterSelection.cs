@@ -3,15 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int selectedCharacter = 0;
+    public GameObject[] characters;
+     
+    public void SelectCharacter()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
-        
+        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
+
 }
