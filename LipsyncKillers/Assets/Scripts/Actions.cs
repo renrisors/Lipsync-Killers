@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Actions : MonoBehaviour
 {
@@ -11,41 +12,56 @@ public class Actions : MonoBehaviour
 
     public Joystick joystick;
     public float moveSpeed;
-    private float horizontalMove = 0f;
-    private bool canMove = true; 
+
+    public GameObject handle;
+    public GameObject energyBar;
+
+    Sprite handleDesactivated;
+    Sprite handleActivated;
+    Sprite energyBarDesactivated;
+    Sprite energyBarActivated;
+
+    public GameObject SpawnPoint;
+    public GameObject boundariLeft;
+    public GameObject boundariRight;
+
+    private void Start()
+    {
+        handleDesactivated = Resources.Load<Sprite>("BOTAO_DESATIVADO");
+        handleActivated = Resources.Load<Sprite>("BOTAO_ATIVADO");
+        energyBarDesactivated = Resources.Load<Sprite>("BARRA ENERGIA_DESATIVADA");
+        energyBarActivated = Resources.Load<Sprite>("BOTAO_BARRA_CHEIA_ATIVADA");
+
+        handle.GetComponent<Image>().sprite = handleDesactivated;
+        energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
+        transform.position = SpawnPoint.transform.position;
+    }
 
     void Update()
     {
-        if(canMove == true)
+        transform.position = transform.position + new Vector3(joystick.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
+        animator.SetFloat("Walking", Mathf.Abs(joystick.Horizontal));
+
+        if (transform.position.x < boundariLeft.transform.position.x)
         {
-            if (joystick.Horizontal < -.2f)
-            {
-                horizontalMove = moveSpeed;
-            }
-            else if (joystick.Horizontal > .2f)
-            {
-                horizontalMove = moveSpeed;
-            }
-            else
-            {
-                horizontalMove = 0f;
-            }
+            this.transform.position = new Vector3(boundariLeft.transform.position.x, this.transform.position.y, 0);
+        }
+        else if (transform.position.x > boundariRight.transform.position.x)
+        {
+            this.transform.position = new Vector3(boundariRight.transform.position.x, this.transform.position.y, 0);
         }
 
-        // Check if special is ready and play the animation
+
+        // Check if special is ready and change de joystick layout;
         if (energyCharge == 30)
         {
-            animator.SetBool("Special", true);
+            handle.GetComponent<Image>().sprite = handleActivated;
+            energyBar.GetComponent<Image>().sprite = energyBarActivated;
+            //animator.SetBool("Special", true);
         }
 
     }
 
-    void FixedUpdate()
-    {
-        animator.SetFloat("Walking", Mathf.Abs(joystick.Horizontal));
-        var moviment = joystick.Horizontal;
-        transform.position += new Vector3(moviment, 0, 0) * Time.time * moveSpeed;
-    }
 
     public void chargeSpecial()
     {
@@ -57,26 +73,13 @@ public class Actions : MonoBehaviour
         //statsSystem.AddCombo(addCombo, deltaDiff, addScore);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void Frenesi()
     {
-        Debug.Log("Encostou");
-        if (collision.otherCollider is BoxCollider2D)
+        int rand = UnityEngine.Random.Range(0, 100);
+        if(rand == UnityEngine.Random.Range(1, 7))
         {
-            if (collision.collider.tag == "Boundary")
-            {
-                canMove = false;
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.otherCollider is BoxCollider2D)
-        {
-            if (collision.collider.tag == "Boundary")
-            {
-                canMove = true;
-            }
+            /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
+                é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
         }
     }
 }
