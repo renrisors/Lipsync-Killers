@@ -30,6 +30,7 @@ namespace RhythmGameStarter
         [Title("Display", 0)]
         public bool progressAsPercentage = true;
         public bool inverseProgressFill = false;
+        public GameObject resultsScreenObject;
 
         [HideInInspector] public float secPerBeat;
         [HideInInspector] public float songPosition;
@@ -142,6 +143,7 @@ namespace RhythmGameStarter
             songStartEventInvoked = false;
 
             if (!dontInvokeEvent)
+                resultsScreenObject.SetActive(true);
                 onSongFinished.Invoke();
 
             trackManager.ClearAllTracks();
