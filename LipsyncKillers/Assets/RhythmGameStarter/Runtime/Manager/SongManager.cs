@@ -206,6 +206,7 @@ namespace RhythmGameStarter
             {
                 songHasStarted = false;
                 songStartEventInvoked = false;
+                resultsScreenObject.SetActive(true);
                 onSongFinished.Invoke();
 
                 trackManager.ClearAllTracks();
@@ -237,7 +238,6 @@ namespace RhythmGameStarter
         public IEnumerator StartContdown()
         {
             playOnAwake = false;
-            Debug.Log("Entrou na corrotina");
 
             startAnimation.GetComponent<Animator>().SetBool("canPlay", true);
             //yield on a new YieldInstruction that waits for 5 seconds.
@@ -245,7 +245,6 @@ namespace RhythmGameStarter
 
             startAnimation.SetActive(false);
             playOnAwake = true;
-            Debug.Log("Saiu da corrotina");
         }
     }
 }

@@ -6,7 +6,9 @@ TagManager:
   tags:
   - LineArea
   - Note
-  - Boundary
+  - Boundary Left
+  - Boundary Right
+  - Handle
   layers:
   - Default
   - TransparentFX

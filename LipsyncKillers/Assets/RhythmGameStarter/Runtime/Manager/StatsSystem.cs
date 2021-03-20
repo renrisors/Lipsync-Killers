@@ -70,7 +70,11 @@ namespace RhythmGameStarter
 
         public void AddCombo(int addCombo, float deltaDiff, int addScore)
         {
+            // Check if the Frenesi Is happening and if Is return the addScore modified
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            addScore = player.GetComponent<Actions>().Frenesi(addScore);
 
+            Debug.Log(combo);
             // print(deltaDiff);
             combo += addCombo;
             if (combo > maxCombo)
@@ -80,7 +84,6 @@ namespace RhythmGameStarter
             }
 
             //Check if the player is making a combo and display mensage
-            Debug.Log(combo);
             if (combo < 1)
             {
                 for (int i = 0; i < 5; i++)
@@ -119,8 +122,7 @@ namespace RhythmGameStarter
             }
 
             //carregar o especial
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponent<Actions>().chargeSpecial();
+            player.GetComponent<Actions>().ChargeSpecial();
 
             for (int i = 0; i < levels.values.Count; i++)
             {
@@ -140,7 +142,6 @@ namespace RhythmGameStarter
             //When no level matched
             onComboStatusUpdate.Invoke("");
 
-            
         }
 
         public void UpdateScoreDisplay()

@@ -15,6 +15,7 @@ public class Actions : MonoBehaviour
 
     public GameObject handle;
     public GameObject energyBar;
+    public GameObject L3;
 
     Sprite handleDesactivated;
     Sprite handleActivated;
@@ -24,6 +25,9 @@ public class Actions : MonoBehaviour
     public GameObject SpawnPoint;
     public GameObject boundariLeft;
     public GameObject boundariRight;
+
+    bool frenesi = false;
+    private float countdown = 5f;
 
     private void Start()
     {
@@ -35,6 +39,8 @@ public class Actions : MonoBehaviour
         handle.GetComponent<Image>().sprite = handleDesactivated;
         energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
         transform.position = SpawnPoint.transform.position;
+
+        L3.SetActive(false);
     }
 
     void Update()
@@ -57,29 +63,41 @@ public class Actions : MonoBehaviour
         {
             handle.GetComponent<Image>().sprite = handleActivated;
             energyBar.GetComponent<Image>().sprite = energyBarActivated;
-            //animator.SetBool("Special", true);
+            L3.SetActive(true);
+            frenesi = true;
         }
 
     }
 
 
-    public void chargeSpecial()
+    public void ChargeSpecial()
     {
         energyCharge++;
     }
 
-    public void AddCombo(int addCombo, float deltaDiff, int addScore)
+    public void Special()
     {
-        //statsSystem.AddCombo(addCombo, deltaDiff, addScore);
+        frenesi = true;
+        animator.SetBool("Special", true);
     }
 
-    public void Frenesi()
+    public int Frenesi(int addscore)
     {
         int rand = UnityEngine.Random.Range(0, 100);
-        if(rand == UnityEngine.Random.Range(1, 7))
+        if((rand >=1 || rand <=7) && frenesi == true)
         {
             /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
                 é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
+            Debug.Log(rand);
+
+            countdown -= Time.deltaTime;
+            if(countdown == 0.0f)
+            {
+                energyCharge = 0;
+                countdown = 5f;
+            }
+            return addscore *= 3;
         }
+        return addscore;
     }
 }
