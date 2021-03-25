@@ -611,6 +611,7 @@ MonoBehaviour:
   energyCharge: 0
   canSpecial: 0
   animator: {fileID: 1445713113}
+  frenesiAnim: {fileID: 0}
   joystick: {fileID: 1326749638}
   moveSpeed: 5
   handle: {fileID: 1179264077}

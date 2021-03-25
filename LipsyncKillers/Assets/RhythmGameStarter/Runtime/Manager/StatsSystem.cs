@@ -74,7 +74,7 @@ namespace RhythmGameStarter
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             addScore = player.GetComponent<Actions>().Frenesi(addScore);
 
-            Debug.Log(combo);
+            // Debug.Log(combo);
             // print(deltaDiff);
             combo += addCombo;
             if (combo > maxCombo)

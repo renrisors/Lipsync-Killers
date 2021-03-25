@@ -9,6 +9,7 @@ public class Actions : MonoBehaviour
     public float energyCharge = 0.0f;
     public bool canSpecial;
     public Animator animator;
+    public Animation frenesiAnim;
 
     public Joystick joystick;
     public float moveSpeed;
@@ -41,12 +42,13 @@ public class Actions : MonoBehaviour
         transform.position = SpawnPoint.transform.position;
 
         L3.SetActive(false);
+        frenesiAnim.Stop();
     }
 
     void Update()
     {
         transform.position = transform.position + new Vector3(joystick.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
-        animator.SetFloat("Walking", Mathf.Abs(joystick.Horizontal));
+        animator.SetFloat("Walking", joystick.Horizontal /*Mathf.Abs(joystick.Horizontal)*/);
 
         if (transform.position.x < boundariLeft.transform.position.x)
         {
@@ -56,7 +58,7 @@ public class Actions : MonoBehaviour
         {
             this.transform.position = new Vector3(boundariRight.transform.position.x, this.transform.position.y, 0);
         }
-
+        
 
         // Check if special is ready and change de joystick layout;
         if (energyCharge == 30)
@@ -65,6 +67,13 @@ public class Actions : MonoBehaviour
             energyBar.GetComponent<Image>().sprite = energyBarActivated;
             L3.SetActive(true);
             frenesi = true;
+        }
+        else if(energyCharge == 0)
+        {
+            handle.GetComponent<Image>().sprite = handleDesactivated;
+            energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
+            L3.SetActive(false);
+            frenesi = false;
         }
 
     }
@@ -79,6 +88,8 @@ public class Actions : MonoBehaviour
     {
         frenesi = true;
         animator.SetBool("Special", true);
+        energyCharge = 0;
+        
     }
 
     public int Frenesi(int addscore)
@@ -89,11 +100,13 @@ public class Actions : MonoBehaviour
             /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
                 é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
             Debug.Log(rand);
+            frenesiAnim.Play();
 
             countdown -= Time.deltaTime;
             if(countdown == 0.0f)
             {
                 energyCharge = 0;
+                animator.SetBool("Special", false);
                 countdown = 5f;
             }
             return addscore *= 3;
