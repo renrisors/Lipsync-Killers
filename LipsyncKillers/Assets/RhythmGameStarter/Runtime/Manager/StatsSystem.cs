@@ -31,6 +31,7 @@ namespace RhythmGameStarter
 
         //Used to check combo and display mensage
         public GameObject[] comboFrases = new GameObject[5];
+        public StarHandler stars;
         
 
         [Serializable]
@@ -150,6 +151,11 @@ namespace RhythmGameStarter
         public void UpdateScoreDisplay()
         {
             onScoreUpdate.Invoke(score.ToString());
+        }
+
+        public void Update()
+        {
+            stars.score = score;
         }
     }
 }

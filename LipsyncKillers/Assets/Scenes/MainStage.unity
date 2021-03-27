@@ -420,12 +420,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &147076411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8119474329949030833, guid: 71e24ac0570276f49bbb4fb16b098eee,
-    type: 3}
-  m_PrefabInstance: {fileID: 8119474328577616180}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &203629289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -1268,6 +1262,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 4087034868758555205, guid: fe644e17ab53a314f926aa81d877b247,
         type: 3}
+      propertyPath: stars
+      value: 
+      objectReference: {fileID: 1571241983}
+    - target: {fileID: 4087034868758555205, guid: fe644e17ab53a314f926aa81d877b247,
+        type: 3}
       propertyPath: comboFrases.Array.data[0]
       value: 
       objectReference: {fileID: 1805796290}
@@ -1340,7 +1339,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onMaxComboUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 147076411}
+      objectReference: {fileID: 0}
     - target: {fileID: 4087034868758555205, guid: fe644e17ab53a314f926aa81d877b247,
         type: 3}
       propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3784,6 +3783,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483198558}
   m_CullTransparentMesh: 0
+--- !u!114 &1571241983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1940196102739544500, guid: 71e24ac0570276f49bbb4fb16b098eee,
+    type: 3}
+  m_PrefabInstance: {fileID: 8119474328577616180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85480e4dbf0c8844f8f17690d7d7e074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1640376587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,6 +4464,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 26963034c93b4954ab89935bfe5bf26b,
         type: 3}
+    - target: {fileID: 8119474329985261009, guid: 71e24ac0570276f49bbb4fb16b098eee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8119474330126365723, guid: 71e24ac0570276f49bbb4fb16b098eee,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4466,7 +4482,7 @@ PrefabInstance:
     - target: {fileID: 8119474330126365723, guid: 71e24ac0570276f49bbb4fb16b098eee,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: DemoSplash
+      value: MainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71e24ac0570276f49bbb4fb16b098eee, type: 3}
