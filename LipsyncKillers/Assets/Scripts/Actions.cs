@@ -64,7 +64,7 @@ public class Actions : MonoBehaviour
         
 
         // Check if special is ready and change de joystick layout;
-        if (energyCharge == 2)
+        if (energyCharge == 30)
         {
             handle.GetComponent<Image>().sprite = handleActivated;
             energyBar.GetComponent<Image>().sprite = energyBarActivated;
