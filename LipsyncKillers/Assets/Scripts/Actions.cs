@@ -9,7 +9,7 @@ public class Actions : MonoBehaviour
     public float energyCharge = 0.0f;
     public bool canSpecial;
     public Animator animator;
-    public Animation frenesiAnim;
+    public Animator frenesiAnim;
 
     public Joystick joystick;
     public float moveSpeed;
@@ -27,8 +27,10 @@ public class Actions : MonoBehaviour
     public GameObject boundariLeft;
     public GameObject boundariRight;
 
-    bool frenesi = false;
-    private float countdown = 5f;
+    [HideInInspector]
+    public bool frenesi = false;
+    //bool performFrenesi = false;
+    int score;
 
     private void Start()
     {
@@ -42,7 +44,8 @@ public class Actions : MonoBehaviour
         transform.position = SpawnPoint.transform.position;
 
         L3.SetActive(false);
-        frenesiAnim.Stop();
+        frenesiAnim.SetBool("Frenesi", false);
+        frenesiAnim.gameObject.SetActive(false);
     }
 
     void Update()
@@ -61,21 +64,18 @@ public class Actions : MonoBehaviour
         
 
         // Check if special is ready and change de joystick layout;
-        if (energyCharge == 30)
+        if (energyCharge == 2)
         {
             handle.GetComponent<Image>().sprite = handleActivated;
             energyBar.GetComponent<Image>().sprite = energyBarActivated;
             L3.SetActive(true);
-            frenesi = true;
         }
         else if(energyCharge == 0)
         {
             handle.GetComponent<Image>().sprite = handleDesactivated;
             energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
             L3.SetActive(false);
-            frenesi = false;
         }
-
     }
 
 
@@ -87,30 +87,47 @@ public class Actions : MonoBehaviour
     public void Special()
     {
         frenesi = true;
-        animator.SetBool("Special", true);
-        energyCharge = 0;
         
+        animator.SetTrigger("Special");
+        energyCharge = 0;
+    }
+
+    public void SetScore(int addscore)
+    {
+        score = addscore;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 
     public int Frenesi(int addscore)
     {
-        int rand = UnityEngine.Random.Range(0, 100);
-        if((rand >=1 || rand <=7) && frenesi == true)
-        {
-            /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
-                é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
-            Debug.Log(rand);
-            frenesiAnim.Play();
+        
+        /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
+            é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
+        animator.SetTrigger("Frenesi");
 
-            countdown -= Time.deltaTime;
-            if(countdown == 0.0f)
-            {
-                energyCharge = 0;
-                animator.SetBool("Special", false);
-                countdown = 5f;
-            }
-            return addscore *= 3;
-        }
-        return addscore;
+        frenesiAnim.gameObject.SetActive(true);
+        frenesiAnim.SetBool("Frenesi", true);
+
+
+        StartCoroutine(CountdownFrenesi());
+        
+
+        return addscore *= 3;
+    }
+
+    IEnumerator CountdownFrenesi()
+    {
+        Debug.Log("entrou");
+        yield return new WaitForSeconds(5);
+        Debug.Log("5 segundos depois");
+        energyCharge = 0;
+        animator.SetTrigger("Frenesi");
+        frenesiAnim.gameObject.SetActive(false);
+        frenesiAnim.SetBool("Frenesi", false);
+        frenesi = false;
     }
 }

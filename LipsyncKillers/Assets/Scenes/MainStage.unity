@@ -655,7 +655,7 @@ MonoBehaviour:
   energyCharge: 0
   canSpecial: 0
   animator: {fileID: 1445713113}
-  frenesiAnim: {fileID: 0}
+  frenesiAnim: {fileID: 945007719}
   joystick: {fileID: 1326749638}
   moveSpeed: 5
   handle: {fileID: 1179264077}
@@ -664,6 +664,7 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1897584020}
   boundariLeft: {fileID: 2074705361}
   boundariRight: {fileID: 1151745040}
+  frenesi: 0
 --- !u!1001 &442482804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4424,7 +4425,7 @@ PrefabInstance:
     - target: {fileID: 8119474329613082971, guid: 71e24ac0570276f49bbb4fb16b098eee,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8119474329866572174, guid: 71e24ac0570276f49bbb4fb16b098eee,
         type: 3}
