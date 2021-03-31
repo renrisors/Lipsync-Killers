@@ -349,6 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144375243}
   - component: {fileID: 144375244}
+  - component: {fileID: 144375245}
   m_Layer: 5
   m_Name: COMBOS-03
   m_TagString: Untagged
@@ -364,7 +365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144375242}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.572, y: 0.277, z: 0}
+  m_LocalPosition: {x: -0.572, y: 0.25, z: 0}
   m_LocalScale: {x: 1.2427075, y: 1.2427075, z: 1.2427075}
   m_Children: []
   m_Father: {fileID: 120736797}
@@ -420,6 +421,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &144375245
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144375242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35fb3ec674c693a4097208057f187b50, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &203629289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -1156,7 +1176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660422607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.42, y: 0.56, z: 0}
+  m_LocalPosition: {x: 3.39, y: 0.56, z: 0}
   m_LocalScale: {x: 1.7068895, y: 1.7068895, z: 1.7068895}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1488,6 +1508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920555033}
   - component: {fileID: 920555032}
+  - component: {fileID: 920555034}
   m_Layer: 5
   m_Name: COMBOS-05
   m_TagString: Untagged
@@ -1553,12 +1574,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920555031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.417, y: 0.277, z: 0}
+  m_LocalPosition: {x: -0.417, y: 0.22, z: 0}
   m_LocalScale: {x: 1.2427075, y: 1.2427075, z: 1.2427075}
   m_Children: []
   m_Father: {fileID: 120736797}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &920555034
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920555031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2e578c64dd724547ad3a2357c7e1208, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &945007718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,6 +1711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1093097290}
   - component: {fileID: 1093097291}
+  - component: {fileID: 1093097292}
   m_Layer: 5
   m_Name: COMBOS-02
   m_TagString: Untagged
@@ -1686,7 +1727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093097289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.866, y: 0.277, z: 0}
+  m_LocalPosition: {x: -0.866, y: 0.24, z: 0}
   m_LocalScale: {x: 1.2427075, y: 1.2427075, z: 1.2427075}
   m_Children: []
   m_Father: {fileID: 120736797}
@@ -1742,6 +1783,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1093097292
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093097289}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c8818eea01bdf94c8fc2b7d16b2f05d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1116352297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200027475}
   - component: {fileID: 1200027476}
+  - component: {fileID: 1200027477}
   m_Layer: 5
   m_Name: COMBOS-04
   m_TagString: Untagged
@@ -1906,7 +1967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200027474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.801, y: 0.277, z: 0}
+  m_LocalPosition: {x: -0.801, y: 0.19, z: 0}
   m_LocalScale: {x: 1.2427075, y: 1.2427075, z: 1.2427075}
   m_Children: []
   m_Father: {fileID: 120736797}
@@ -1962,6 +2023,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1200027477
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200027474}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76b6e5af91eb7ba49acc1c1193aff960, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1208508660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,6 +3972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805796291}
   - component: {fileID: 1805796292}
+  - component: {fileID: 1805796293}
   m_Layer: 5
   m_Name: COMBOS-01
   m_TagString: Untagged
@@ -3907,7 +3988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805796290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.76, y: 0.277, z: 0}
+  m_LocalPosition: {x: -0.76, y: 0.18, z: 0}
   m_LocalScale: {x: 1.2427075, y: 1.2427075, z: 1.2427075}
   m_Children: []
   m_Father: {fileID: 120736797}
@@ -3963,6 +4044,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1805796293
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805796290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e380bbe037c72b7448c7cf229cdc37de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1849666666
 GameObject:
   m_ObjectHideFlags: 0
