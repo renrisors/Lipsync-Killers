@@ -14,6 +14,7 @@ public class StarHandler : MonoBehaviour
         {
             //Zero Stars
             text[0].SetActive(true);
+            Debug.Log(score);
         }
 
         else if (score >= 10000 && score < 20000)
@@ -21,6 +22,7 @@ public class StarHandler : MonoBehaviour
             //One Stars
             stars[0].SetActive(true);
             text[1].SetActive(true);
+            Debug.Log(score);
         }
 
         else if (score >= 20000 && score < 30000)
@@ -29,6 +31,7 @@ public class StarHandler : MonoBehaviour
             stars[0].SetActive(true);
             stars[1].SetActive(true);
             text[2].SetActive(true);
+            Debug.Log(score);
         }
 
         else if (score >= 30000 && score < 40000)

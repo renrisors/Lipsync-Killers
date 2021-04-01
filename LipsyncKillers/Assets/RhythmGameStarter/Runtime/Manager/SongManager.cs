@@ -207,6 +207,7 @@ namespace RhythmGameStarter
                 songHasStarted = false;
                 songStartEventInvoked = false;
                 resultsScreenObject.SetActive(true);
+                resultsScreenObject.GetComponent<StarHandler>().starsAchieved();
                 onSongFinished.Invoke();
 
                 trackManager.ClearAllTracks();
