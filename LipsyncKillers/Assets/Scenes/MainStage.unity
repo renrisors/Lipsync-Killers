@@ -1215,7 +1215,7 @@ PrefabInstance:
         type: 3}
       propertyPath: notePrefabMapping
       value: 
-      objectReference: {fileID: 11400000, guid: 7117bffafc88fd74382aeecf3219f483,
+      objectReference: {fileID: 11400000, guid: dbf2927d18abb3541909bb3eb1ae9f8b,
         type: 2}
     - target: {fileID: 4087034868758555205, guid: fe644e17ab53a314f926aa81d877b247,
         type: 3}
@@ -3578,7 +3578,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.144
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
