@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcc7143b8421ffa4c8482bcce31d9f98, type: 3}
-  m_Name: DemoNotePrefabMapping 1
+  m_Name: DemoNotePrefabMapping
   m_EditorClassIdentifier: 
   referenceRootOctave: 3
   ignoreOctave: 0
   ignoreName: 1
   notesPrefab:
-  - prefab: {fileID: 8397699897526961635, guid: 19c3a47ed92a6064298df68bb53c9323,
+  - prefab: {fileID: 8397699897526961635, guid: a8bbe05f24310734da5700943f3421a9,
       type: 3}
     poolSize: 20
-  - prefab: {fileID: 1528742009364248792, guid: f254f8ff599752e44ade56b2b8173369,
+  - prefab: {fileID: 1528742009364248792, guid: 05192b8f8c9bd1d409159c60ca73689b,
       type: 3}
     poolSize: 6
-  - prefab: {fileID: 7212494586997379943, guid: 8f235079eb2b08a4693eec17f84ef888,
+  - prefab: {fileID: 7212494586997379943, guid: 1ed17a514cdb5064db9c8f3f726a8659,
       type: 3}
     poolSize: 6
-  - prefab: {fileID: 7212494586997379943, guid: 9bca2e7c699534e99b2a3e588d9d3ccf,
+  - prefab: {fileID: 7212494586997379943, guid: 36cdcb644d5820d449c838e10ff9dbac,
       type: 3}
     poolSize: 6
   - prefab: {fileID: 7212494586997379943, guid: 8d75117c44fe786428e82e3e22f432dc,

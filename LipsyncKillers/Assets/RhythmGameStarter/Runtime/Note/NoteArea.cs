@@ -125,7 +125,7 @@ namespace RhythmGameStarter
                         hasPossibleDirection = true;
                     }
 
-                    //Diagonais
+                    /*/Diagonais
                     else if ((keyboardInputHandler && (hasDirectionKey(keyboardInputHandler.up) && hasDirectionKey(keyboardInputHandler.left)) || ((diff.y <= -NoteRecorder.INSTANCE.swipeThreshold) && (diff.x >= NoteRecorder.INSTANCE.swipeThreshold))))
                     {
                         possibleDirection = Note.SwipeDirection.UpLeft;
@@ -145,7 +145,7 @@ namespace RhythmGameStarter
                     {
                         possibleDirection = Note.SwipeDirection.DownRight;
                         hasPossibleDirection = true;
-                    }
+                    }*/
                 }
 
                 if ((currentFingerID != -1 && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)) || (keyboardInputHandler && Input.GetKeyUp(key)))
@@ -247,19 +247,19 @@ namespace RhythmGameStarter
                                         addCombo = Input.GetKey(keyboardInputHandler.right);
                                         break;
 
-                                    //Diagonais
-                                    case Note.SwipeDirection.UpLeft:
-                                        addCombo = Input.GetKey(keyboardInputHandler.upLeft);
-                                        break;
-                                    case Note.SwipeDirection.UpRight:
-                                        addCombo = Input.GetKey(keyboardInputHandler.upRight);
-                                        break;
-                                    case Note.SwipeDirection.DownLeft:
-                                        addCombo = Input.GetKey(keyboardInputHandler.downLeft);
-                                        break;
-                                    case Note.SwipeDirection.DownRight:
-                                        addCombo = Input.GetKey(keyboardInputHandler.downRight);
-                                        break;
+                                        /*/Diagonais
+                                        case Note.SwipeDirection.UpLeft:
+                                            addCombo = Input.GetKey(keyboardInputHandler.upLeft);
+                                            break;
+                                        case Note.SwipeDirection.UpRight:
+                                            addCombo = Input.GetKey(keyboardInputHandler.upRight);
+                                            break;
+                                        case Note.SwipeDirection.DownLeft:
+                                            addCombo = Input.GetKey(keyboardInputHandler.downLeft);
+                                            break;
+                                        case Note.SwipeDirection.DownRight:
+                                            addCombo = Input.GetKey(keyboardInputHandler.downRight);
+                                            break;*/
                                 }
                             }
 
@@ -282,7 +282,7 @@ namespace RhythmGameStarter
                                         addCombo = diff.x <= -currentNote.swipeThreshold;
                                         break;
 
-                                    //Diagonais
+                                    /*/Diagonais
                                     case Note.SwipeDirection.UpRight:
                                         addCombo = diff.y <= -currentNote.swipeThreshold;
                                         break;
@@ -294,7 +294,7 @@ namespace RhythmGameStarter
                                         break;
                                     case Note.SwipeDirection.DownLeft:
                                         addCombo = diff.y >= currentNote.swipeThreshold;
-                                        break;
+                                        break;*/
 
                                 }
                                 // print(currentNote.swipeDirection + " " + diff.x + " " + addCombo + " " + touch.position + " " + touch.fingerId + " " + touch.phase);
