@@ -75,7 +75,7 @@ namespace RhythmGameStarter
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             int rand = UnityEngine.Random.Range(0, 100);
-            if (/*(rand >= 1 || rand <= 7) && */player.GetComponent<Actions>().frenesi == true)
+            if ((rand >= 1 && rand <= 7) && player.GetComponent<Actions>().frenesi == true)
                 addScore = player.GetComponent<Actions>().Frenesi(addScore);
 
             // Debug.Log(combo);
