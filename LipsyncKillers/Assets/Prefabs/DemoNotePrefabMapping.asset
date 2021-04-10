@@ -46,7 +46,7 @@ MonoBehaviour:
     noteOctave: 6
   - notePrefabIndex: 4
     noteName: 0
-    noteOctave: 6
+    noteOctave: 7
   - notePrefabIndex: 5
     noteName: 0
-    noteOctave: 6
+    noteOctave: 8
