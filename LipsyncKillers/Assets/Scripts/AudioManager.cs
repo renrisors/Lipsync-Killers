@@ -2,6 +2,14 @@
 using System;
 using UnityEngine;
 
+
+/// <summary>
+/// Warning: This script is USELESS as of now. 
+/// It does nothing and affects nothing.
+/// For relevant audio scripts, check the "BGMusic" & "BGStop" scripts
+/// </summary>
+
+
 public class AudioManager : MonoBehaviour
 {
 
