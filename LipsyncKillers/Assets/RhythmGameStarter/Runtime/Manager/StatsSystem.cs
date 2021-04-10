@@ -118,7 +118,7 @@ namespace RhythmGameStarter
                 comboFrases[3].SetActive(true);
                 score += (int)(addScore * 1.7);
             }
-            else if (combo < 20)
+            else if (combo >= 21)
             {
                 comboFrases[3].SetActive(false);
                 comboFrases[4].SetActive(true);

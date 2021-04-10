@@ -309,8 +309,8 @@ Transform:
   m_Children:
   - {fileID: 306506969}
   - {fileID: 1462643726}
-  - {fileID: 258350171}
   - {fileID: 1961665636}
+  - {fileID: 258350171}
   - {fileID: 2037317855}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 258350173}
   - component: {fileID: 258350172}
   m_Layer: 5
-  m_Name: COMBOS-03
+  m_Name: COMBOS-04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357,7 +357,7 @@ Transform:
   m_LocalScale: {x: 1.2427075, y: 1.2427075, z: 1.2427075}
   m_Children: []
   m_Father: {fileID: 165701149}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &258350172
 Animator:
@@ -3373,7 +3373,7 @@ GameObject:
   - component: {fileID: 1961665638}
   - component: {fileID: 1961665637}
   m_Layer: 5
-  m_Name: COMBOS-04
+  m_Name: COMBOS-03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3391,7 +3391,7 @@ Transform:
   m_LocalScale: {x: 1.2427075, y: 1.2427075, z: 1.2427075}
   m_Children: []
   m_Father: {fileID: 165701149}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1961665637
 Animator:
@@ -4062,12 +4062,12 @@ PrefabInstance:
         type: 3}
       propertyPath: comboFrases.Array.data[2]
       value: 
-      objectReference: {fileID: 258350170}
+      objectReference: {fileID: 1961665635}
     - target: {fileID: 4684293226625881743, guid: 8c4ea05311ba67e4a99ffbb1cb5dd565,
         type: 3}
       propertyPath: comboFrases.Array.data[3]
       value: 
-      objectReference: {fileID: 1961665635}
+      objectReference: {fileID: 258350170}
     - target: {fileID: 4684293226625881743, guid: 8c4ea05311ba67e4a99ffbb1cb5dd565,
         type: 3}
       propertyPath: comboFrases.Array.data[4]
