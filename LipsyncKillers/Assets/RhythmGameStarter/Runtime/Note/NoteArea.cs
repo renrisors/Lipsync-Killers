@@ -209,7 +209,7 @@ namespace RhythmGameStarter
                             }
                             else
                             {
-                                // print("noteFailed");
+                                print("noteFailed");
                                 songManager.comboSystem.BreakCombo();
                             }
 
@@ -310,6 +310,10 @@ namespace RhythmGameStarter
 
                                 KillNote(currentNote);
                                 currentNote = null;
+                            }
+                            else
+                            {
+                                print("noteFailed");
                             }
                         }
                         break;

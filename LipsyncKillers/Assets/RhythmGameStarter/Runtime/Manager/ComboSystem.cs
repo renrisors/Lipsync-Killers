@@ -55,7 +55,12 @@ namespace RhythmGameStarter
 
         public void UpdateComboDisplay()
         {
-            onComboUpdate.Invoke(statsSystem.combo.ToString());
+            if(statsSystem.combo != 0)
+                onComboUpdate.Invoke("Combo X " + statsSystem.combo.ToString());
+            else
+            {
+                onComboUpdate.Invoke("");
+            }
         }
     }
 }
