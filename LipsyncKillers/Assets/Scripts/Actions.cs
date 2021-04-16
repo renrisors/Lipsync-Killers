@@ -26,6 +26,9 @@ public class Actions : MonoBehaviour
     public GameObject SpawnPoint;
     public GameObject boundariLeft;
     public GameObject boundariRight;
+    private GameObject FrenesiSFX;
+    private GameObject SpecialSFX;
+    private GameObject ChargedSFX;
 
     [HideInInspector]
     public bool frenesi = false;
@@ -46,6 +49,11 @@ public class Actions : MonoBehaviour
         L3.SetActive(false);
         frenesiAnim.SetBool("Frenesi", false);
         frenesiAnim.gameObject.SetActive(false);
+
+        FrenesiSFX = GameObject.Find("FrenesiSFX");
+        SpecialSFX = GameObject.Find("SpecialSFX");
+        ChargedSFX = GameObject.Find("ChargedSFX");
+
     }
 
     void Update()
@@ -69,6 +77,8 @@ public class Actions : MonoBehaviour
             handle.GetComponent<Image>().sprite = handleActivated;
             energyBar.GetComponent<Image>().sprite = energyBarActivated;
             L3.SetActive(true);
+            ChargedSFX.GetComponent<AudioSource>().Play();
+
         }
         else if(energyCharge == 0)
         {
@@ -90,6 +100,7 @@ public class Actions : MonoBehaviour
         
         animator.SetTrigger("Special");
         energyCharge = 0;
+        SpecialSFX.GetComponent<AudioSource>().Play();
     }
 
     public void SetScore(int addscore)
@@ -112,6 +123,7 @@ public class Actions : MonoBehaviour
         frenesiAnim.gameObject.SetActive(true);
         frenesiAnim.SetBool("Frenesi", true);
 
+        FrenesiSFX.GetComponent<AudioSource>().Play();
 
         StartCoroutine(CountdownFrenesi());
         

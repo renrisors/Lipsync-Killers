@@ -32,6 +32,7 @@ namespace RhythmGameStarter
         //Used to check combo and display mensage
         public GameObject[] comboFrases = new GameObject[5];
         public StarHandler stars;
+        private GameObject ComboSFX;
         
 
         [Serializable]
@@ -62,6 +63,7 @@ namespace RhythmGameStarter
         void Start()
         {
             UpdateScoreDisplay();
+            ComboSFX = GameObject.Find("ComboSFX");
 
             for (int i = 0; i < 5; i++)
             {
@@ -99,30 +101,35 @@ namespace RhythmGameStarter
             {
                 comboFrases[0].SetActive(true);
                 score += (int)(addScore * 0.5);
+                ComboSFX.GetComponent<AudioSource>().Play();
             }
             else if (combo >= 6 && combo <= 10)
             {
                 comboFrases[0].SetActive(false);
                 comboFrases[1].SetActive(true);
                 score += (int)(addScore * 1);
+                ComboSFX.GetComponent<AudioSource>().Play();
             }
             else if (combo >= 11 && combo <= 15)
             {
                 comboFrases[1].SetActive(false);
                 comboFrases[2].SetActive(true);
                 score += (int)(addScore * 1.2);
+                ComboSFX.GetComponent<AudioSource>().Play();
             }
             else if (combo >= 16 && combo <= 20)
             {
                 comboFrases[2].SetActive(false);
                 comboFrases[3].SetActive(true);
                 score += (int)(addScore * 1.7);
+                ComboSFX.GetComponent<AudioSource>().Play();
             }
             else if (combo >= 21)
             {
                 comboFrases[3].SetActive(false);
                 comboFrases[4].SetActive(true);
                 score += (int)(addScore * 2);
+                ComboSFX.GetComponent<AudioSource>().Play();
             }
 
             //carregar o especial
