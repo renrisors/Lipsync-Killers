@@ -23,7 +23,7 @@ public class Actions : MonoBehaviour
     Sprite energyBarDesactivated;
     Sprite energyBarActivated;
 
-    public GameObject SpawnPoint;
+    //public GameObject SpawnPoint;
     public GameObject boundariLeft;
     public GameObject boundariRight;
     private GameObject FrenesiSFX;
@@ -44,16 +44,18 @@ public class Actions : MonoBehaviour
 
         handle.GetComponent<Image>().sprite = handleDesactivated;
         energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
-        transform.position = SpawnPoint.transform.position;
+        //transform.position = SpawnPoint.transform.position;
 
         L3.SetActive(false);
-        frenesiAnim.SetBool("Frenesi", false);
+        frenesiAnim.GetComponent<Animator>().SetBool("Frenesi", false);
         frenesiAnim.gameObject.SetActive(false);
 
         FrenesiSFX = GameObject.Find("FrenesiSFX");
         SpecialSFX = GameObject.Find("SpecialSFX");
         ChargedSFX = GameObject.Find("ChargedSFX");
 
+        boundariLeft = GameObject.Find("Boudary Left");
+        boundariRight = GameObject.Find("Boudary Right");
     }
 
     void Update()
