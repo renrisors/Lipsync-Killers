@@ -11,6 +11,8 @@ public class LoadCharacter : MonoBehaviour
         int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
         GameObject prefab = characterPrefabs[selectedCharacter];
         GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        Debug.Log("Personagem carregado: " + characterPrefabs[selectedCharacter].name);
+
         BGMusic.Instance.gameObject.GetComponent<AudioSource>().Stop();
     }
 }

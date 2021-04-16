@@ -36,7 +36,6 @@ public class BGMusic : MonoBehaviour
 
         if (scene.name == "NewMainStage")
         {
-            Debug.Log("Nelson");
             Destroy(this.gameObject);
             return;
         }
