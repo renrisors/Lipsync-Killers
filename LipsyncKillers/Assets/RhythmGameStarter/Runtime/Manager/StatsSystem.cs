@@ -97,34 +97,34 @@ namespace RhythmGameStarter
                     comboFrases[i].SetActive(false);
                 }
             }
-            else if (combo >= 1 && combo <= 5)
+            else if (combo == 1)
             {
                 comboFrases[0].SetActive(true);
                 score += (int)(addScore * 0.5);
                 ComboSFX.GetComponent<AudioSource>().Play();
             }
-            else if (combo >= 6 && combo <= 10)
+            else if (combo == 6)
             {
                 comboFrases[0].SetActive(false);
                 comboFrases[1].SetActive(true);
                 score += (int)(addScore * 1);
                 ComboSFX.GetComponent<AudioSource>().Play();
             }
-            else if (combo >= 11 && combo <= 15)
+            else if (combo == 11)
             {
                 comboFrases[1].SetActive(false);
                 comboFrases[2].SetActive(true);
                 score += (int)(addScore * 1.2);
                 ComboSFX.GetComponent<AudioSource>().Play();
             }
-            else if (combo >= 16 && combo <= 20)
+            else if (combo == 16)
             {
                 comboFrases[2].SetActive(false);
                 comboFrases[3].SetActive(true);
                 score += (int)(addScore * 1.7);
                 ComboSFX.GetComponent<AudioSource>().Play();
             }
-            else if (combo >= 21)
+            else if (combo == 21)
             {
                 comboFrases[3].SetActive(false);
                 comboFrases[4].SetActive(true);
