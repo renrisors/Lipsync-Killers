@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CharSelect.unity
     guid: f7068f3a04af969438415514b40d11e8
   - enabled: 1
-    path: Assets/Scenes/NewMainStage.unity
+    path: Assets/Scenes/MainStage.unity
     guid: 1eb35e2215b261040b67c67e4782c711
   - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
