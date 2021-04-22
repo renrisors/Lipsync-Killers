@@ -49,6 +49,8 @@ namespace RhythmGameStarter
             statsSystem.AddMissed(1);
             statsSystem.combo = 0;
 
+            onComboUpdate.Invoke("");
+
             isShowing = false;
             onVisibilityChange.Invoke(isShowing);
         }

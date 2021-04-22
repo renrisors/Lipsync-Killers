@@ -76,9 +76,9 @@ namespace RhythmGameStarter
             // Check if the Frenesi Is happening and if Is return the addScore modified
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-            int rand = UnityEngine.Random.Range(0, 100);
-            if ((rand >= 1 && rand <= 7) && player.GetComponent<Actions>().frenesi == true)
-                addScore = player.GetComponent<Actions>().Frenesi(addScore);
+            //int rand = UnityEngine.Random.Range(0, 100);
+            //if ((rand >= 1 && rand <= 7) && player.GetComponent<Actions>().frenesi == true)
+            addScore = player.GetComponent<Actions>().Frenesi(addScore);
 
             // Debug.Log(combo);
             // print(deltaDiff);

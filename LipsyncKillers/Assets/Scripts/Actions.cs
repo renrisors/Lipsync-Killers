@@ -118,20 +118,26 @@ public class Actions : MonoBehaviour
 
     public int Frenesi(int addscore)
     {
-        
-        /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
-            é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
-        animator.SetTrigger("Frenesi");
+        int rand = UnityEngine.Random.Range(0, 100);
+        if ((rand >= 1 && rand <= 7) && frenesi == true)
+        {
+            /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
+                é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
+            animator.SetTrigger("Frenesi");
 
-        frenesiAnim.gameObject.SetActive(true);
-        frenesiAnim.SetBool("Frenesi", true);
+            frenesiAnim.gameObject.SetActive(true);
+            frenesiAnim.SetBool("Frenesi", true);
 
-        FrenesiSFX.GetComponent<AudioSource>().Play();
+            FrenesiSFX.GetComponent<AudioSource>().Play();
 
-        StartCoroutine(CountdownFrenesi());
-        
+            StartCoroutine(CountdownFrenesi());
 
-        return addscore *= 3;
+
+            return addscore *= 3;
+        }
+        frenesi = false;
+
+        return addscore;
     }
 
     IEnumerator CountdownFrenesi()

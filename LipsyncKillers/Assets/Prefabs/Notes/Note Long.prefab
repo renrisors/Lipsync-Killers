@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2038686398
 Transform:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1598036157488814221
 Transform:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7487134979823211976
 Transform:
   m_ObjectHideFlags: 0
@@ -5148,7 +5148,7 @@ GameObject:
   - component: {fileID: 8829098930800734465}
   - component: {fileID: 4828057513986329692}
   m_Layer: 0
-  m_Name: Note 2
+  m_Name: Note Long
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5185,16 +5185,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46aa07a12618a154bbe239c77a2ed132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 50
-  action: 0
+  score: 75
+  action: 1
   swipeDirection: 0
   swipeThreshold: 0.5
   killAnim: {fileID: 0}
-  noTapEffect: 0
+  noTapEffect: 1
   hitSound: {fileID: 8300000, guid: cea92605ce97b794b9d05c66e6c0d9f4, type: 3}
   noHitSound: 1
-  applyNoteLenghtTarget: {fileID: 0}
-  noteLengthSizeOffset: 0
+  applyNoteLenghtTarget: {fileID: 773763262176415783}
+  noteLengthSizeOffset: 0.5
 --- !u!111 &377598035321330059
 Animation:
   m_ObjectHideFlags: 0

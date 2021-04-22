@@ -218,24 +218,6 @@ namespace RhythmGameStarter
             }
         }
 
-        private void Countdown()
-        {
-            if(beforeStart == true)
-            {
-                float countdown = 0;
-                startAnimation.GetComponent<Animator>().SetBool("canPlay", true);
-                Time.timeScale = 0;
-                while (countdown < 5f)
-                {
-                    Debug.Log(countdown);
-                    countdown += Time.deltaTime;
-                }
-                Time.timeScale = 1;
-                startAnimation.SetActive(false);
-                beforeStart = false;
-            }
-        }
-
         public IEnumerator StartContdown()
         {
             playOnAwake = false;
