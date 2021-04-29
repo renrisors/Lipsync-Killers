@@ -31,6 +31,8 @@ namespace RhythmGameStarter
         public bool progressAsPercentage = true;
         public bool inverseProgressFill = false;
         public GameObject resultsScreenObject;
+        private GameObject ResultsVinheta;
+        private GameObject KillersVinheta;
 
         [HideInInspector] public float secPerBeat;
         [HideInInspector] public float songPosition;
@@ -70,8 +72,9 @@ namespace RhythmGameStarter
         {
             StartCoroutine(StartContdown());
             trackManager.Init(this);
+            ResultsVinheta = GameObject.Find("ResultsVinheta");
+            KillersVinheta = GameObject.Find("KillersVinheta");
 
-            
         }
 
         public void PlaySong()
@@ -208,6 +211,7 @@ namespace RhythmGameStarter
                 songStartEventInvoked = false;
                 resultsScreenObject.SetActive(true);
                 resultsScreenObject.GetComponent<StarHandler>().starsAchieved();
+                ResultsVinheta.GetComponent<AudioSource>().Play();
                 onSongFinished.Invoke();
 
                 trackManager.ClearAllTracks();
@@ -222,6 +226,7 @@ namespace RhythmGameStarter
         {
             playOnAwake = false;
 
+            KillersVinheta.GetComponent<AudioSource>().Play();
             startAnimation.GetComponent<Animator>().SetBool("canPlay", true);
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(5);
