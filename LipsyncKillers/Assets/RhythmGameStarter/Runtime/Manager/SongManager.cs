@@ -226,7 +226,7 @@ namespace RhythmGameStarter
         {
             playOnAwake = false;
 
-            KillersVinheta.GetComponent<AudioSource>().Play();
+            //KillersVinheta.GetComponent<AudioSource>().Play();
             startAnimation.GetComponent<Animator>().SetBool("canPlay", true);
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(5);
