@@ -50,6 +50,7 @@ namespace RhythmGameStarter
         #region RUNTIME_FIELD
 
         [NonSerialized] public bool songPaused;
+        private bool CanStart = false;
         [NonSerialized] public SongItem currentSongItem;
         [NonSerialized] public ComboSystem comboSystem;
         [NonSerialized] public TrackManager trackManager;
@@ -66,14 +67,16 @@ namespace RhythmGameStarter
         {
             trackManager = GetComponent<TrackManager>();
             comboSystem = GetComponent<ComboSystem>();
+            ResultsVinheta = GameObject.Find("ResultsVinheta");
+            KillersVinheta = GameObject.Find("KillersVinheta");
         }
 
         private void Start()
         {
             StartCoroutine(StartContdown());
+            
             trackManager.Init(this);
-            ResultsVinheta = GameObject.Find("ResultsVinheta");
-            KillersVinheta = GameObject.Find("KillersVinheta");
+            
 
         }
 
@@ -226,8 +229,9 @@ namespace RhythmGameStarter
         {
             playOnAwake = false;
 
-            //KillersVinheta.GetComponent<AudioSource>().Play();
             startAnimation.GetComponent<Animator>().SetBool("canPlay", true);
+            yield return new WaitForSeconds(0.4f);
+            KillersVinheta.GetComponent<AudioSource>().Play();
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(5);
 
