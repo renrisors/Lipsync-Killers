@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 141574064}
   - component: {fileID: 141574063}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -506,8 +506,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8417720464764242844, guid: 78cb07dfffe06434f979bac774090472,
-          type: 3}
+      - m_Target: {fileID: 1157028554}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -909,6 +908,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1157028554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8417720464764242844, guid: 78cb07dfffe06434f979bac774090472,
+    type: 3}
+  m_PrefabInstance: {fileID: 1173674671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0ef8a40be318a4e9af0a62c327656b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1173674671
 PrefabInstance:
   m_ObjectHideFlags: 0
