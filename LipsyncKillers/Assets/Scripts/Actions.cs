@@ -23,17 +23,17 @@ public class Actions : MonoBehaviour
     Sprite energyBarDesactivated;
     Sprite energyBarActivated;
 
-    //public GameObject SpawnPoint;
-    public GameObject boundariLeft;
-    public GameObject boundariRight;
+    private GameObject boundariLeft;
+    private GameObject boundariRight;
     private GameObject FrenesiSFX;
     private GameObject SpecialSFX;
     private GameObject ChargedSFX;
 
     [HideInInspector]
     public bool frenesi = false;
-    //bool performFrenesi = false;
     int score;
+    [HideInInspector]
+    public bool idle;
 
     private void Start()
     {
@@ -58,10 +58,10 @@ public class Actions : MonoBehaviour
         boundariRight = GameObject.Find("Boudary Right");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         transform.position = transform.position + new Vector3(joystick.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
-        animator.SetFloat("Walking", joystick.Horizontal /*Mathf.Abs(joystick.Horizontal)*/);
+        animator.SetFloat("Walking", joystick.Horizontal);
         animator.SetFloat("Up", joystick.Vertical);;
 
         if (transform.position.x < boundariLeft.transform.position.x)
@@ -72,7 +72,11 @@ public class Actions : MonoBehaviour
         {
             this.transform.position = new Vector3(boundariRight.transform.position.x, this.transform.position.y, 0);
         }
-        
+
+        if (joystick.Horizontal < 0.2 && joystick.Horizontal > -0.2)
+            idle = true;
+        else
+            idle = false;
 
         // Check if special is ready and change de joystick layout;
         if (energyCharge == 30)

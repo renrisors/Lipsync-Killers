@@ -812,7 +812,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nonami
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6225287319185701181, guid: 8754fa3ea7f16044bba6be3d60877ff1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2293298735428391656, guid: 8754fa3ea7f16044bba6be3d60877ff1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8754fa3ea7f16044bba6be3d60877ff1, type: 3}
 --- !u!4 &4058233419773504126 stripped
 Transform:

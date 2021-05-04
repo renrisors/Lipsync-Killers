@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5352924091726156654}
   - component: {fileID: 897589383911109635}
   - component: {fileID: 3818010777504630504}
+  - component: {fileID: 2293298735428391656}
   m_Layer: 0
   m_Name: Nonami
   m_TagString: Untagged
@@ -102,3 +103,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2293298735428391656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225287319185701181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3318cecaec75f904da660f50da09e744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundariLeft: {fileID: 0}
+  boundariRight: {fileID: 0}

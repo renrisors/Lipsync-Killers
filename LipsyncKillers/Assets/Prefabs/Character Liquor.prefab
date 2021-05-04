@@ -709,7 +709,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Liquor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8991943889826675796, guid: 392f7f4f7250c534a97f14464e72d905,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3060236341830252990, guid: 392f7f4f7250c534a97f14464e72d905, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 392f7f4f7250c534a97f14464e72d905, type: 3}
 --- !u!4 &491322187515174600 stripped
 Transform:
