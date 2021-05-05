@@ -32,8 +32,12 @@ public class Actions : MonoBehaviour
     [HideInInspector]
     public bool frenesi = false;
     int score;
-    [HideInInspector]
-    public bool idle;
+
+    //booleanas usadas pela Behavior Tree do oponente
+    [HideInInspector] public bool idle;
+    [HideInInspector] public bool special = false;
+    [HideInInspector] public bool frenesiHappening = false;
+
 
     private void Start()
     {
@@ -104,10 +108,13 @@ public class Actions : MonoBehaviour
     public void Special()
     {
         frenesi = true;
-        
+        special = true;
+
+
         animator.SetTrigger("Special");
         energyCharge = 0;
         SpecialSFX.GetComponent<AudioSource>().Play();
+        special = false;
     }
 
     public void SetScore(int addscore)
@@ -125,6 +132,7 @@ public class Actions : MonoBehaviour
         int rand = UnityEngine.Random.Range(0, 100);
         if ((rand >= 1 && rand <= 7) && frenesi == true)
         {
+            frenesiHappening = true;
             /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
                 é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
             animator.SetTrigger("Frenesi");
@@ -140,6 +148,7 @@ public class Actions : MonoBehaviour
             return addscore *= 3;
         }
         frenesi = false;
+        frenesiHappening = false;
 
         return addscore;
     }

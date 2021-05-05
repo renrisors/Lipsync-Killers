@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/*  
+    Jogador             Reação
+    Sem ação/Idle       Walk
+    Walk                Up/Walk
+    20 acertos          Golpe carregado (com chances de Frenesi)
+    Golpe carregado     Idle
+    Frenesi             Walk/Up
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +20,7 @@ public class OponentBehavior : MonoBehaviour
 
     private GameObject boundariLeft;
     private GameObject boundariRight;
+    private int rng;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +35,11 @@ public class OponentBehavior : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (_player.idle == true)
+        if (_player.idle == true || _player.frenesiHappening == true)
         {
             transform.position = transform.position + new Vector3(direction * moveSpeed * Time.deltaTime, 0, 0);
             _anim.SetFloat("Walking", direction);
+            _anim.SetFloat("Up", 0);
 
             if (transform.position.x < boundariLeft.transform.position.x)
             {
@@ -41,8 +52,16 @@ public class OponentBehavior : MonoBehaviour
         }
         else
         {
-            _anim.SetFloat("Walking", 0);
+            rng = Random.Range(0, 101);
+            //Debug.Log(rng);
+            if (rng >= 0 && rng <= 50)
+                _anim.SetFloat("Walking", 0);
+            else if(rng > 50 && rng <= 100)
+                _anim.SetFloat("Up", 0.6f);
         }
+
+        /*if(_player.special == true)
+            _anim.SetFloat("Walking", 0);*/
 
     }
 }
