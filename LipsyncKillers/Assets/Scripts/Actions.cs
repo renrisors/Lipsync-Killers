@@ -83,7 +83,46 @@ public class Actions : MonoBehaviour
             idle = false;
 
         // Check if special is ready and change de joystick layout;
-        if (energyCharge == 30)
+        switch (energyCharge)
+        {
+            case 0:
+                handle.GetComponent<Image>().sprite = handleDesactivated;
+                energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
+                L3.SetActive(false);
+                break;
+            
+            case 1:
+                energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (1)");
+                break;
+
+            case 5:
+                energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (2)");
+                break;
+
+            case 10:
+                energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (3)");
+                break;
+
+            case 15:
+                energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (4)");
+                break;
+
+            case 20:
+                energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (5)");
+                break;
+
+            case 30:
+                energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (6)");
+                handle.GetComponent<Image>().sprite = handleActivated;
+                L3.SetActive(true);
+                ChargedSFX.GetComponent<AudioSource>().Play();
+                break;
+
+            default:
+                break;
+        }
+
+        /*if (energyCharge == 30)
         {
             handle.GetComponent<Image>().sprite = handleActivated;
             energyBar.GetComponent<Image>().sprite = energyBarActivated;
@@ -96,7 +135,7 @@ public class Actions : MonoBehaviour
             handle.GetComponent<Image>().sprite = handleDesactivated;
             energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
             L3.SetActive(false);
-        }
+        }*/
     }
 
 
