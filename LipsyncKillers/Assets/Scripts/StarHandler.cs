@@ -10,20 +10,20 @@ public class StarHandler : MonoBehaviour
 
     public void starsAchieved()
     {
-        if (score >= 0 && score < 9450)
+        if (score >= 0 && score < 3200)
         {
             //Zero Stars
             text[0].SetActive(true);
         }
 
-        else if (score >= 9450 && score < 13250)
+        else if (score >= 3200 && score < 5150)
         {
             //One Stars
             stars[0].SetActive(true);
             text[1].SetActive(true);
         }
 
-        else if (score >= 13250 && score < 18550)
+        else if (score >= 5150 && score < 9450)
         {
             //Two Stars
             stars[0].SetActive(true);
@@ -31,7 +31,7 @@ public class StarHandler : MonoBehaviour
             text[2].SetActive(true);
         }
 
-        else if (score >= 18550 && score < 24350)
+        else if (score >= 9450 && score < 13750)
         {
             //Three Stars
             stars[0].SetActive(true);
@@ -40,7 +40,7 @@ public class StarHandler : MonoBehaviour
             text[3].SetActive(true);
         }
 
-        else if (score >= 24350 && score < 29750)
+        else if (score >= 13750 && score < 16250)
         {
             //Four Stars
             stars[0].SetActive(true);
@@ -50,7 +50,7 @@ public class StarHandler : MonoBehaviour
             text[4].SetActive(true);
         }
 
-        else if (score >= 29750)
+        else if (score >= 16250)
         {
             //Five Stars
             stars[0].SetActive(true);
