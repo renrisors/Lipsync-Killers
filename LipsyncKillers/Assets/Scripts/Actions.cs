@@ -41,8 +41,26 @@ public class Actions : MonoBehaviour
 
     private void Start()
     {
-        handleDesactivated = Resources.Load<Sprite>("BOTAO_DESATIVADO");
-        handleActivated = Resources.Load<Sprite>("BOTAO_ATIVADO");
+        
+        if(this.transform.gameObject.name == "Character Liquor")
+        {
+            handleActivated = Resources.Load<Sprite>("BOTAO_ATIVADO_LIQUOR");
+            handleDesactivated = Resources.Load<Sprite>("BOTAO_DESATIVADO_LIQUOR-12");
+        }
+
+        else if (this.transform.gameObject.name == "Character Nonami")
+        {
+            handleActivated = Resources.Load<Sprite>("BOTAO_ATIVADO_NONAMI");
+            handleDesactivated = Resources.Load<Sprite>("BOTAO_DESATIVADO_NONAMI-12");
+        }
+            
+        else
+        {
+            Debug.LogError("Nome não encontrado. Botão Default colcoado");
+            handleActivated = Resources.Load<Sprite>("BOTAO_ATIVADO");
+            handleDesactivated = Resources.Load<Sprite>("BOTAO_DESATIVADO");
+        }
+        
         energyBarDesactivated = Resources.Load<Sprite>("BARRA ENERGIA_DESATIVADA");
         energyBarActivated = Resources.Load<Sprite>("BOTAO_BARRA_CHEIA_ATIVADA");
 
@@ -113,7 +131,7 @@ public class Actions : MonoBehaviour
 
             case 30:
                 energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (6)");
-                handle.GetComponent<Image>().sprite = handleActivated;
+                //handle.GetComponent<Image>().sprite = handleActivated;
                 L3.SetActive(true);
                 ChargedSFX.GetComponent<AudioSource>().Play();
                 break;
@@ -121,21 +139,6 @@ public class Actions : MonoBehaviour
             default:
                 break;
         }
-
-        /*if (energyCharge == 30)
-        {
-            handle.GetComponent<Image>().sprite = handleActivated;
-            energyBar.GetComponent<Image>().sprite = energyBarActivated;
-            L3.SetActive(true);
-            ChargedSFX.GetComponent<AudioSource>().Play();
-
-        }
-        else if(energyCharge == 0)
-        {
-            handle.GetComponent<Image>().sprite = handleDesactivated;
-            energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
-            L3.SetActive(false);
-        }*/
     }
 
 

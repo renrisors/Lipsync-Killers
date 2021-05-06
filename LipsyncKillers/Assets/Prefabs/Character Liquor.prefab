@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 491322186971699471}
   - component: {fileID: 491322186971699468}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Character Liquor
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,9 +53,10 @@ MonoBehaviour:
   handle: {fileID: 3348230077186854499}
   energyBar: {fileID: 3348230075327745433}
   L3: {fileID: 491322187997022733}
-  boundariLeft: {fileID: 0}
-  boundariRight: {fileID: 0}
   frenesi: 0
+  idle: 0
+  special: 0
+  frenesiHappening: 0
 --- !u!1 &491322187325996716
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -534, y: -145}
+  m_AnchoredPosition: {x: -828, y: -266}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &491322187997022734
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8732e742f0956540b5079d993e3bef3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d17393264c2b00d45917204e8866920b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
