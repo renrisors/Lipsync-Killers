@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 004989688792d4b4a8003f6607898de5
+guid: 9dbd26fdc6077614f866a9fdfb5f1fe4
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 1675865720947699060
-    second: BOTAO_ATIVADO_LIQUOR_0
-  - first:
-      213: -5360842303275165042
-    second: BOTAO_ATIVADO_LIQUOR_1
-  - first:
-      213: 6939267493411137036
-    second: BOTAO_ATIVADO_LIQUOR_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +32,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -49,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,70 +97,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: BOTAO_ATIVADO_LIQUOR_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 140.66667
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47d675c7efed14710800000000000000
-      internalID: 1675865720947699060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BOTAO_ATIVADO_LIQUOR_1
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 0
-        width: 140.66667
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8a956004567a95b0800000000000000
-      internalID: -5360842303275165042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BOTAO_ATIVADO_LIQUOR_2
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 0
-        width: 140.66667
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c06af2af40b3d4060800000000000000
-      internalID: 6939267493411137036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

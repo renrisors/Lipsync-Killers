@@ -289,8 +289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53.6, y: -407.3}
-  m_SizeDelta: {x: 448.8164, y: 142.01503}
+  m_AnchoredPosition: {x: 7, y: -407.3}
+  m_SizeDelta: {x: 385, y: 127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222427707
 MonoBehaviour:
@@ -365,8 +365,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9dbd26fdc6077614f866a9fdfb5f1fe4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3888,8 +3888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60.6, y: 39}
-  m_SizeDelta: {x: 745.16296, y: 639.9358}
+  m_AnchoredPosition: {x: 0.000030518, y: 0.000068665}
+  m_SizeDelta: {x: 2559.9995, y: 1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534728725
 MonoBehaviour:
@@ -3910,7 +3910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9eb4898e558e78848ab9fa5f07970cc9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4037,7 +4037,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START
+  m_Text: 
 --- !u!222 &1620536844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4186,9 +4186,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 50.183
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e63a9420e6245b4b8fc3746f65256ce, type: 2}
-  m_sharedMaterial: {fileID: -6052098479078116057, guid: 2e63a9420e6245b4b8fc3746f65256ce,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4230,7 +4229,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
