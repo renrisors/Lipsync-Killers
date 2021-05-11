@@ -9,6 +9,7 @@ TagManager:
   - Boundary Left
   - Boundary Right
   - Handle
+  - Oponent
   layers:
   - Default
   - TransparentFX

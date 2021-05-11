@@ -39,6 +39,7 @@ public class Actions : MonoBehaviour
     [HideInInspector] public bool frenesiHappening = false;
 
 
+
     private void Start()
     {
         
@@ -172,15 +173,15 @@ public class Actions : MonoBehaviour
     public int Frenesi(int addscore)
     {
         int rand = UnityEngine.Random.Range(0, 100);
-        if ((rand >= 1 && rand <= 12) && frenesi == true)
+        if ((rand >= 1 && rand <= 12) && (frenesi == true || frenesiHappening == true))
         {
             frenesiHappening = true;
             /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
                 é aumentada em 3x. Tap = 150, Hold 225 e Slide 105 */
-            animator.SetTrigger("Frenesi");
+            animator.SetBool("Frenesi", true);
 
             frenesiAnim.gameObject.SetActive(true);
-            frenesiAnim.SetBool("Frenesi", true);
+            //frenesiAnim.SetBool("Frenesi", true);
 
             FrenesiSFX.GetComponent<AudioSource>().Play();
 
@@ -190,7 +191,7 @@ public class Actions : MonoBehaviour
             return addscore *= 3;
         }
         frenesi = false;
-        frenesiHappening = false;
+        
 
         return addscore;
     }
@@ -201,9 +202,10 @@ public class Actions : MonoBehaviour
         yield return new WaitForSeconds(8);
         Debug.Log("5 segundos depois");
         energyCharge = 0;
-        animator.SetTrigger("Frenesi");
+        animator.SetBool("Frenesi", false);
         frenesiAnim.gameObject.SetActive(false);
         frenesiAnim.SetBool("Frenesi", false);
         frenesi = false;
+        frenesiHappening = false;
     }
 }
