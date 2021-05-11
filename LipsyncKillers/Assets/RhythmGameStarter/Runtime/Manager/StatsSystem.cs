@@ -32,7 +32,13 @@ namespace RhythmGameStarter
         //Used to check combo and display mensage
         public GameObject[] comboFrases = new GameObject[5];
         public StarHandler stars;
+
+        //SFX
         private GameObject ComboSFX;
+        private GameObject arrasaSFX;
+        private GameObject fabulosoSFX;
+        private GameObject impecavelSFX;
+        private GameObject yesGirlSFX;
         
 
         [Serializable]
@@ -64,6 +70,11 @@ namespace RhythmGameStarter
         {
             UpdateScoreDisplay();
             ComboSFX = GameObject.Find("ComboSFX");
+            arrasaSFX = GameObject.Find("ArrasaSFX");
+            fabulosoSFX = GameObject.Find("FabulosoSFX");
+            impecavelSFX = GameObject.Find("ImpecavelSFX");
+            yesGirlSFX = GameObject.Find("YesGirlSFX");
+
 
             for (int i = 0; i < 5; i++)
             {
@@ -76,8 +87,6 @@ namespace RhythmGameStarter
             // Check if the Frenesi Is happening and if Is return the addScore modified
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-            //int rand = UnityEngine.Random.Range(0, 100);
-            //if ((rand >= 1 && rand <= 7) && player.GetComponent<Actions>().frenesi == true)
             addScore = player.GetComponent<Actions>().Frenesi(addScore);
 
             // Debug.Log(combo);
@@ -101,14 +110,14 @@ namespace RhythmGameStarter
             {
                 comboFrases[0].SetActive(true);
                 score += (int)(addScore * 0.5);
-                ComboSFX.GetComponent<AudioSource>().Play();
+                yesGirlSFX.GetComponent<AudioSource>().Play();
             }
             else if (combo == 6)
             {
                 comboFrases[0].SetActive(false);
                 comboFrases[1].SetActive(true);
                 score += (int)(addScore * 1);
-                ComboSFX.GetComponent<AudioSource>().Play();
+                arrasaSFX.GetComponent<AudioSource>().Play();
             }
             else if (combo == 11)
             {
@@ -122,14 +131,14 @@ namespace RhythmGameStarter
                 comboFrases[2].SetActive(false);
                 comboFrases[3].SetActive(true);
                 score += (int)(addScore * 1.7);
-                ComboSFX.GetComponent<AudioSource>().Play();
+                fabulosoSFX.GetComponent<AudioSource>().Play();
             }
             else if (combo == 21)
             {
                 comboFrases[3].SetActive(false);
                 comboFrases[4].SetActive(true);
                 score += (int)(addScore * 2);
-                ComboSFX.GetComponent<AudioSource>().Play();
+                impecavelSFX.GetComponent<AudioSource>().Play();
             }
 
             //carregar o especial
