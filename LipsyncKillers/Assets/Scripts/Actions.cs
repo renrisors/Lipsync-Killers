@@ -84,7 +84,7 @@ public class Actions : MonoBehaviour
     {
         transform.position = transform.position + new Vector3(joystick.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
         animator.SetFloat("Walking", joystick.Horizontal);
-        animator.SetFloat("Up", joystick.Vertical);;
+        animator.SetFloat("Up", joystick.Vertical);
 
         if (transform.position.x < boundariLeft.transform.position.x)
         {
