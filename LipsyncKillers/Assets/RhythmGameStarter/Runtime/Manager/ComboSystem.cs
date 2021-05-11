@@ -15,6 +15,7 @@ namespace RhythmGameStarter
         public BoolEvent onVisibilityChange;
 
         private StatsSystem statsSystem;
+        private OponentBehavior oponent;
 
         
         public int combo;
@@ -26,6 +27,7 @@ namespace RhythmGameStarter
         private void Start()
         {
             UpdateComboDisplay();
+            oponent = GameObject.FindGameObjectWithTag("Oponent").GetComponent<OponentBehavior>();
         }
 
         public void AddCombo(int addCombo, float deltaDiff, int score)
@@ -33,6 +35,10 @@ namespace RhythmGameStarter
             statsSystem.AddCombo(addCombo, deltaDiff, score);
 
             combo++;
+            if(combo == 20)
+            {
+                oponent.DecideFrenesi();
+            }
             
 
             if (!isShowing)

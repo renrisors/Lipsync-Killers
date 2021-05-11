@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2293298735428391656}
   m_Layer: 0
   m_Name: Nonami
-  m_TagString: Untagged
+  m_TagString: Oponent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
