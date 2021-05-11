@@ -172,7 +172,7 @@ public class Actions : MonoBehaviour
     public int Frenesi(int addscore)
     {
         int rand = UnityEngine.Random.Range(0, 100);
-        if ((rand >= 1 && rand <= 7) && frenesi == true)
+        if ((rand >= 1 && rand <= 12) && frenesi == true)
         {
             frenesiHappening = true;
             /* Durante 5 segundos o especial é repetido e nesse tempo pontuação no trilho 
@@ -198,7 +198,7 @@ public class Actions : MonoBehaviour
     IEnumerator CountdownFrenesi()
     {
         Debug.Log("entrou");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         Debug.Log("5 segundos depois");
         energyCharge = 0;
         animator.SetTrigger("Frenesi");
