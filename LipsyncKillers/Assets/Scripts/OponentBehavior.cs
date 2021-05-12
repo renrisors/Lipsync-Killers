@@ -40,7 +40,7 @@ public class OponentBehavior : MonoBehaviour
 
     public void HandleMovement()
     {
-        if (_player.idle == true || _player.frenesiHappening == true || _player.special == true || canWalk == true)
+        if (_player.idle == true  || _player.frenesiHappening == true || _player.special == true  /*|| canwakl == true*/)
         {
             transform.position = transform.position + new Vector3(direction * moveSpeed * Time.deltaTime, 0, 0);
             _anim.SetFloat("Walking", direction);
@@ -67,13 +67,15 @@ public class OponentBehavior : MonoBehaviour
         Debug.Log(rng);
         if (rng >= 0 && rng <= 50)
         {
-            _anim.SetFloat("Walking", 0);
+            _anim.SetFloat("Walking", direction);
+            _anim.SetFloat("Up", 0);
             StartCoroutine(CanChangeAction());
             
         }
         else if (rng > 50 && rng <= 100)
         {
-            _anim.SetFloat("Up", 0.6f);
+            _anim.SetFloat("Up", 1);
+            _anim.SetFloat("Walking", 0);
             StartCoroutine(CanChangeAction());
         }
     }
@@ -95,6 +97,7 @@ public class OponentBehavior : MonoBehaviour
 
     IEnumerator CanChangeAction()
     {
+        Debug.Log("Entrou na corrotina");
         yield return new WaitForSeconds(5);
         canWalk = true;
     }

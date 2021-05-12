@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WALK_NONAMI
+  m_Name: WALK_NONAMI_RIGHT
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0

@@ -313,7 +313,7 @@ namespace RhythmGameStarter
                             }
                             else
                             {
-                                print("noteFailed");
+                                //print("noteFailed");
                             }
                         }
                         break;
