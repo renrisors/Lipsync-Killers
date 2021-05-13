@@ -65,16 +65,15 @@ namespace RhythmGameStarter
                 comboFrases[i].SetActive(false);
             }
         }
-
         void Start()
         {
             UpdateScoreDisplay();
+
             ComboSFX = GameObject.Find("ComboSFX");
             arrasaSFX = GameObject.Find("ArrasaSFX");
             fabulosoSFX = GameObject.Find("FabulosoSFX");
             impecavelSFX = GameObject.Find("ImpecavelSFX");
             yesGirlSFX = GameObject.Find("YesGirlSFX");
-
 
             for (int i = 0; i < 5; i++)
             {
