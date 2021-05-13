@@ -22,6 +22,8 @@ public class OponentBehavior : MonoBehaviour
     private GameObject boundariRight;
     private int rng;
     private bool canWalk = true;
+    private bool frenesi = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +38,16 @@ public class OponentBehavior : MonoBehaviour
     void FixedUpdate()
     {
         HandleMovement();
+
+        if(_player.comboAtual == 20 && canWalk == true)
+        {
+            DecideFrenesi();
+        }
     }
 
     public void HandleMovement()
     {
-        if (_player.idle == true  || _player.frenesiHappening == true || _player.special == true  /*|| canwakl == true*/)
+        if ((_player.idle == true  || _player.frenesiHappening == false || _player.special == false)  && canWalk == true)
         {
             transform.position = transform.position + new Vector3(direction * moveSpeed * Time.deltaTime, 0, 0);
             _anim.SetFloat("Walking", direction);
@@ -55,20 +62,22 @@ public class OponentBehavior : MonoBehaviour
                 direction = -1;
             }
         }
-        else
+        /*else if(_player.idle == false && _player.frenesiHappening == false && _player.special == false)
         {
             DecideWalkUp();
-        }
+        }*/
+
     }
     
     public void DecideWalkUp() //Decide if the oponent will walk or perform Up based on player actions
     {
         rng = Random.Range(0, 101);
-        Debug.Log(rng);
+        Debug.Log("DECIDE WALK / UP");
         if (rng >= 0 && rng <= 50)
         {
             _anim.SetFloat("Walking", direction);
             _anim.SetFloat("Up", 0);
+            canWalk = false;
             StartCoroutine(CanChangeAction());
             
         }
@@ -76,29 +85,55 @@ public class OponentBehavior : MonoBehaviour
         {
             _anim.SetFloat("Up", 1);
             _anim.SetFloat("Walking", 0);
+            canWalk = false;
             StartCoroutine(CanChangeAction());
         }
     }
 
     public void DecideFrenesi()
     {
-        canWalk = false;
         int rand = UnityEngine.Random.Range(0, 100);
-        if (rand >= 1 && rand <= 7)
-        {
-            _anim.SetTrigger("Frenesi");
+        Debug.Log(rand);
+        canWalk = false;
+        if (frenesi == false)
+        {            
+            if (rand >= 1 && rand <= 12)
+            {
+                frenesi = true;
+                _anim.SetFloat("Up", 0);
+                _anim.SetFloat("Walking", 0);
+                _anim.SetBool("Frenesi", true);
+                _player.frenesiAnim.gameObject.SetActive(true);
+                _player.frenesiAnim.SetBool("Frenesi", true);
+                StartCoroutine(CountdownFrenesi());
+            }
+            else if (frenesi == false)
+            {
+                Debug.Log("Entrou no else");
+                _anim.SetFloat("Up", 0);
+                _anim.SetFloat("Walking", 0);
+                _anim.SetTrigger("Special");
+                StartCoroutine(CanChangeAction());
+            }
         }
-        else
-        {
-            _anim.SetTrigger("Special");
-        }
-        CanChangeAction();
+    }
+
+    IEnumerator CountdownFrenesi()
+    {
+        yield return new WaitForSeconds(8);
+        _anim.SetBool("Frenesi", false);
+        _player.frenesiAnim.gameObject.SetActive(false);
+        _player.frenesiAnim.SetBool("Frenesi", false);
+        yield return new WaitForSeconds(2);
+        canWalk = true;
+        frenesi = false;
     }
 
     IEnumerator CanChangeAction()
     {
-        Debug.Log("Entrou na corrotina");
-        yield return new WaitForSeconds(5);
+        //Debug.Log("Entrou na corrotina");
+        yield return new WaitForSeconds(3);
+        Debug.Log("3 seg depois");
         canWalk = true;
     }
 }

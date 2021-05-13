@@ -98,6 +98,8 @@ namespace RhythmGameStarter
                 onMaxComboUpdate.Invoke(maxCombo.ToString());
             }
 
+            player.GetComponent<Actions>().GetCombo(combo);
+
             //Check if the player is making a combo and display mensage
             if (combo < 1)
             {

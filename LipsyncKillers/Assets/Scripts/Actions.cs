@@ -37,6 +37,7 @@ public class Actions : MonoBehaviour
     [HideInInspector] public bool idle;
     [HideInInspector] public bool special = false;
     [HideInInspector] public bool frenesiHappening = false;
+    [HideInInspector] public int comboAtual;
 
 
 
@@ -169,6 +170,13 @@ public class Actions : MonoBehaviour
     {
         return score;
     }
+
+    public void GetCombo(int combo)
+    {
+        comboAtual = combo;
+    }
+
+
 
     public int Frenesi(int addscore)
     {
