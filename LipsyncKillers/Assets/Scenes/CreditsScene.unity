@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -149.4}
+  m_AnchoredPosition: {x: 3, y: -129}
   m_SizeDelta: {x: 402, y: 83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27336888
@@ -329,7 +329,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c9230eee0914c5b43920fc69310d08a3, type: 3}
-    m_FontSize: 50
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\n\n\nRenan Riso\n\n\nSol S\xEAda\nGabriel Medeiros\n\n\nJuliana Nascimento\nDico
-    Barbosa\nRafaella\nFer Bassini\n\n\nGuilherme "
+    Barbosa\nRafa Milani\nFer Bassani\n\n\nGuilherme Giacomini"
 --- !u!222 &56697227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 169.3}
+  m_AnchoredPosition: {x: 3, y: 159}
   m_SizeDelta: {x: 312, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134870388
@@ -599,7 +599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 88.5}
+  m_AnchoredPosition: {x: 3, y: 95}
   m_SizeDelta: {x: 444, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422403027
@@ -673,7 +673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -14.5}
+  m_AnchoredPosition: {x: 3, y: 1}
   m_SizeDelta: {x: 536, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706393888
