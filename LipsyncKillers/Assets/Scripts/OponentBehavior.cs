@@ -20,6 +20,10 @@ public class OponentBehavior : MonoBehaviour
 
     private GameObject boundariLeft;
     private GameObject boundariRight;
+
+    private GameObject FrenesiSFX;
+    private GameObject SpecialSFX;
+
     private int rng;
     private bool canWalk = true;
     private bool canChangeAction = true;
@@ -33,6 +37,9 @@ public class OponentBehavior : MonoBehaviour
 
         boundariLeft = GameObject.Find("Boudary Left");
         boundariRight = GameObject.Find("Boudary Right");
+
+        FrenesiSFX = GameObject.Find("FrenesiSFX");
+        SpecialSFX = GameObject.Find("SpecialSFX");
     }
 
     // Update is called once per frame
@@ -113,6 +120,8 @@ public class OponentBehavior : MonoBehaviour
                 _anim.SetBool("Frenesi", true);
                 _player.frenesiAnim.gameObject.SetActive(true);
                 _player.frenesiAnim.SetBool("Frenesi", true);
+                FrenesiSFX.GetComponent<AudioSource>().Play();
+
                 StartCoroutine(CountdownFrenesi());
             }
             else if (frenesi == false)
@@ -121,6 +130,7 @@ public class OponentBehavior : MonoBehaviour
                 _anim.SetFloat("Up", 0);
                 _anim.SetFloat("Walking", 0);
                 _anim.SetTrigger("Special");
+                SpecialSFX.GetComponent<AudioSource>().Play();
                 StartCoroutine(CanChangeAction());
             }
         }
