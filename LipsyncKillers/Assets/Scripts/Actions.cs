@@ -207,7 +207,7 @@ public class Actions : MonoBehaviour
     IEnumerator CountdownFrenesi()
     {
         Debug.Log("entrou");
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(6);
         Debug.Log("5 segundos depois");
         energyCharge = 0;
         animator.SetBool("Frenesi", false);

@@ -138,7 +138,7 @@ public class OponentBehavior : MonoBehaviour
 
     IEnumerator CountdownFrenesi()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(6);
         _anim.SetBool("Frenesi", false);
         _player.frenesiAnim.gameObject.SetActive(false);
         _player.frenesiAnim.SetBool("Frenesi", false);
