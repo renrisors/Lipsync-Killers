@@ -29,9 +29,11 @@ public class Actions : MonoBehaviour
     private GameObject SpecialSFX;
     private GameObject ChargedSFX;
 
-    [HideInInspector]
-    public bool frenesi = false;
+
+    [HideInInspector] public bool frenesi = false;
+    [HideInInspector] public bool startMoving = false; //Used to start the oponent actions
     int score;
+
 
     //booleanas usadas pela Behavior Tree do oponente
     [HideInInspector] public bool idle;
@@ -84,6 +86,17 @@ public class Actions : MonoBehaviour
 
     void FixedUpdate()
     {
+        HandleMovement();
+        ChargeEnergy();
+    }
+
+    private void HandleMovement()
+    {
+        if (joystick.Horizontal != 0 || joystick.Vertical != 0 || score != 0)
+        {
+            startMoving = true;
+        }
+
         transform.position = transform.position + new Vector3(joystick.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
         animator.SetFloat("Walking", joystick.Horizontal);
         animator.SetFloat("Up", joystick.Vertical);
@@ -101,7 +114,10 @@ public class Actions : MonoBehaviour
             idle = true;
         else
             idle = false;
+    }
 
+    private void ChargeEnergy()
+    {
         // Check if special is ready and change de joystick layout;
         switch (energyCharge)
         {
@@ -110,7 +126,7 @@ public class Actions : MonoBehaviour
                 energyBar.GetComponent<Image>().sprite = energyBarDesactivated;
                 L3.SetActive(false);
                 break;
-            
+
             case 1:
                 energyBar.GetComponent<Image>().sprite = Resources.Load<Sprite>("BARRA (1)");
                 break;
@@ -166,10 +182,10 @@ public class Actions : MonoBehaviour
         score = addscore;
     }
 
-    public int GetScore()
+    /*public int GetScore()
     {
         return score;
-    }
+    }*/
 
     public void GetCombo(int combo)
     {

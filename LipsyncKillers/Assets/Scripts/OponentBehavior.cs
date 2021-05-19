@@ -45,7 +45,10 @@ public class OponentBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        HandleMovement();
+        if (_player.startMoving == true)
+        {
+            HandleMovement();
+        }
 
         if(_player.comboAtual == 20 && canWalk == true)
         {
@@ -108,7 +111,7 @@ public class OponentBehavior : MonoBehaviour
     public void DecideFrenesi()
     {
         rng = UnityEngine.Random.Range(0, 100);
-        Debug.Log(rng);
+        
         canWalk = false;
         if (frenesi == false)
         {            

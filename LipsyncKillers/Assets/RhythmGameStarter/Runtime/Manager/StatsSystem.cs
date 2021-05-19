@@ -87,6 +87,7 @@ namespace RhythmGameStarter
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             addScore = player.GetComponent<Actions>().Frenesi(addScore);
+            player.GetComponent<Actions>().SetScore(addScore);
 
             // Debug.Log(combo);
             // print(deltaDiff);

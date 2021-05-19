@@ -900,6 +900,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResultScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 8119474329613082971, guid: 71e24ac0570276f49bbb4fb16b098eee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8119474329866572173, guid: 71e24ac0570276f49bbb4fb16b098eee,
         type: 3}
       propertyPath: m_IsActive
