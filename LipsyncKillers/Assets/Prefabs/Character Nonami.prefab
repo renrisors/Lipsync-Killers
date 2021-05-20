@@ -54,9 +54,11 @@ MonoBehaviour:
   energyBar: {fileID: 3348230075327745433}
   L3: {fileID: 491322187997022733}
   frenesi: 0
+  startMoving: 0
   idle: 0
   special: 0
   frenesiHappening: 0
+  comboAtual: 0
 --- !u!1 &491322187325996716
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -828, y: -266}
+  m_AnchoredPosition: {x: -558.7, y: -134.4}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &491322187997022734
@@ -473,12 +475,12 @@ PrefabInstance:
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 256
+      value: 318
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 256
+      value: 318
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
