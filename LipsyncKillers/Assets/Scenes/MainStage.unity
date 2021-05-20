@@ -4501,7 +4501,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultSong
       value: 
-      objectReference: {fileID: 11400000, guid: ff1cb3f3d3e090948a24555998f77df1,
+      objectReference: {fileID: 11400000, guid: 9fa6b2926ce4d0d4b9bc45d9ea6726b4,
         type: 2}
     - target: {fileID: 2492644252168886258, guid: 8c4ea05311ba67e4a99ffbb1cb5dd565,
         type: 3}
