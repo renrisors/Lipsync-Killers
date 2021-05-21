@@ -11,7 +11,8 @@ public class Actions : MonoBehaviour
     public Animator animator;
     public Animator frenesiAnim;
 
-    public Joystick joystick;
+    public float horizontalInput = 0;
+    public float verticalInput = 0;
     public float moveSpeed;
 
     public GameObject handle;
@@ -92,14 +93,36 @@ public class Actions : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (joystick.Horizontal != 0 || joystick.Vertical != 0 || score != 0)
+        if (horizontalInput != 0 || verticalInput != 0 || score != 0)
         {
             startMoving = true;
         }
 
-        transform.position = transform.position + new Vector3(joystick.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
-        animator.SetFloat("Walking", joystick.Horizontal);
-        animator.SetFloat("Up", joystick.Vertical);
+        if (Input.GetKey(KeyCode.D))
+        {
+            horizontalInput = 1;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            horizontalInput = -1;
+        }
+        else
+        {
+            horizontalInput = 0;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            verticalInput = 1;
+        }
+        else
+        {
+            verticalInput = 0;
+        }
+
+        transform.position = transform.position + new Vector3(horizontalInput * moveSpeed * Time.deltaTime, 0, 0);
+        animator.SetFloat("Walking", horizontalInput);
+        animator.SetFloat("Up", verticalInput);
 
         if (transform.position.x < boundariLeft.transform.position.x)
         {
@@ -110,7 +133,7 @@ public class Actions : MonoBehaviour
             this.transform.position = new Vector3(boundariRight.transform.position.x, this.transform.position.y, 0);
         }
 
-        if (joystick.Horizontal < 0.2 && joystick.Horizontal > -0.2)
+        if (horizontalInput < 0.2 && horizontalInput > -0.2)
             idle = true;
         else
             idle = false;
