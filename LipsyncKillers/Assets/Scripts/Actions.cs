@@ -89,6 +89,12 @@ public class Actions : MonoBehaviour
     {
         HandleMovement();
         ChargeEnergy();
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            if(energyCharge >= 30)
+                Special();
+        }
     }
 
     private void HandleMovement()
